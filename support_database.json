@@ -1,0 +1,218 @@
+[
+    {
+        "name": "Berserk Mode",
+        "ability": "Rage\nAttacks have a 20% chance to apply a bleed effect that deals 10% maximum health for 3 turns.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Big Brain",
+        "ability": "Brainiac\nOn entry, Strike the enemy with divine light, dealing 75% of the supported card's damage. In addition prevent the supported card's skill from being disabled.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Binding Vow",
+        "ability": "Sorcery Knowledge\nUpon first fatal blow, revive to 85% HP in exchange for 25% of your damage.\nThis support Skill is limited to one use only.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Binding Light",
+        "ability": "Seal Of Restriction\nWhen the supported card is defeated, the opponent's ability is disabled for 2 turns.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Black Flash",
+        "ability": "Critical Focus\nWhile equipped, the supported card has a 45% chance every other attack to land a critical hit, dealing 150% damage.\nEach critical hit has a 30% chance to trigger a follow-up strike for 75% damaage, with the roll made after each successful hit (allowing multiple follow-up attacks if RNG permits)",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Black Slime",
+        "ability": "Slime Coat\nReduce all incoming damage to the supported card by 60% on the first turn and 40% on the second turn.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Cursed Ledger",
+        "ability": "Life Siphon\nReduces the health of the entire enemy party by 2.5% after every other attack.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Divine Tree",
+        "ability": "Fruit Of Life\nWhen the supported card dies, transfer 25% of its damage to the next ally card.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Dragon Sin Blades",
+        "ability": "Double Strike\n20% Chance for the supported card to attack a second time dealing 50% of the original damage.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Fallen Knight",
+        "ability": "Harvest\nWhen the support card is defeated, all allies receive a buff for 15% of the supported card's max health and damage.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Fox Cloak",
+        "ability": "Nine Tails Wrath\nWhen the supported card is below 50% health, apply a burn that deals 3.5% maximum health and transfers across cards.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Froststorm Blade",
+        "ability": "Ice Zone\n20% chance to freeze the opponent for one turn after the supported card attacks.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Galaxy Hero",
+        "ability": "Galaxy Impact\nFor every party member supported by Galaxy Hero, buff the supported card's stats by 10%.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Heart Of The Cards",
+        "ability": "Forbidden Knowledge\nWhen below 50% health; take 40% reduced damage.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Hidden Monarch",
+        "ability": "Ruler's Order\nAfter attacking, heal for 10% of the damage dealt to the opponent.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Holy Staff",
+        "ability": "Divine Strike\n20% Chance to heal 15% maximum health after attacking.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Limitless",
+        "ability": "Infinity\nWhen the supported card gets hit for the first time while on the field, nullify all damage.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Mech Contract",
+        "ability": "Mech Summon\nReduce all incoming damage by 25%.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Music Idol",
+        "ability": "Melodic Tone\nIf the opponent's card is more common than the supported card, disable their ability for 2 turns.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Mystic Spheres",
+        "ability": "Wish Fulfillment\nOn entry, randomly grant one of the following buffs:\n- 20% bonus max health\n- 20% bonus damage\n- 20% chance to dodge attacks",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Ninja Vest",
+        "ability": "Demon's Blessing\nOn entry, boosts the supported card's health by 10%.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Null Blade",
+        "ability": "Apocalyptic Slash\nDisables the opponent's ability for one turn when the supported card enters.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Orb Of Dominance",
+        "ability": "Domination\nOn entry, if the opponent has less damage than you, disable their ability for 2 turns and boost your damage by 20%.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Red Thorn",
+        "ability": "Red Fragment\nOn entry, the supported card has a 50% chance to dodge the first 2 attacks and gain a 15% damage boost while the dodge is active.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Reversed Curse Technique",
+        "ability": "Hyper Regeneration\nAfter each enemy attack, heal for 85% of the damage received in exchange for 15% of your max health.\nThis support Caard is limited to 3 activations, and healing will not exceed your maximum health.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Sacred Art Uzumaki",
+        "ability": "Maximum Uzumaki\nAfter attacking, 20% chance to hurl Uzumaki at the opponent dealing 2x of the supported cards damage. Each time this activates, drain the supported card's health by 35% of it's maximum health.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Sealed Cube",
+        "ability": "Eternal Imprisonment\nThe first attack by an opponent will cause the opponent to be imprisoned for 1 turn.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Shadow Mage",
+        "ability": "Shadow Ball\nAfter the supported card attacks, shoot a fireball that deals 25% of the supported card's damage.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Shinobi Cells",
+        "ability": "Nature Wrath\nAfter defeating an opponent, heal for 50% of their maximum health.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Sky Drum",
+        "ability": "Nature's Lightning\nWhen the supported card enters the field, call down lightning that does 25% of the supported card's damage to the current enemy. Additionally, there is a 40% chance to stun enemies for 1 turn when they enter the field.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Slayer Mark",
+        "ability": "Awaken\nWhile on the field, the supported card will survive the first fatal attack with 1 health.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Substitution Log",
+        "ability": "Substitution\n10% chance to dodge an attack.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Truck-Kun",
+        "ability": "High-Speed Accident\nIf the supported card is defeated and the enemy card is lower than 30% max health, the enemy is automatically defeated.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Truth Seeking Orbs",
+        "ability": "Path of Truth\nOn entry, disable the enemy's support card for 2 turns in exchange for 10% of your damage.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Undead Staff",
+        "ability": "Overload\nFor each enemy card that has been defeated by the supported card, add 25% of their damage to the staff. When the supported card is defeated, unleash an attack on the enemy card using the total accumulated damage, up to a maximum of 150% of the supported card's damage.",
+        "type": "support",
+        "rarity": "basic"
+    },
+    {
+        "name": "Vase Of Greed",
+        "ability": "20% chance to increase all living party members' health and damage by 10% after attacking.",
+        "type": "support",
+        "rarity": "basic"
+    }
+]
