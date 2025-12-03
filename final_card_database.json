@@ -1,0 +1,2009 @@
+[
+    {
+        "name": "Armored Giant",
+        "ability": "Titan Shield\nAny card played after this one is granted a shield that protects them from being hit once when they enter the field.",
+        "damage": "1.27K",
+        "hp": "2.55K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/30,000,000"
+    },
+    {
+        "name": "Awakened Crow Master",
+        "ability": "Illusionary Realm\nThe opponent has a 35% chance to hit themselves for 50% of the damage of their attacks, up to 2 times.\nWhen paired with the card \"Flicker Ninja\", the chance increases to 60% and can trigger up to 3 times.",
+        "damage": "4.69K",
+        "hp": "9.37K",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/50,000,000"
+    },
+    {
+        "name": "Awakened Dark Avenger",
+        "ability": "Chidori Storm\nAfter this card is defeated, activate a storm that deals 10% of an opponent's maximum health after an ally attacks.",
+        "damage": "372",
+        "hp": "744",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/500,000"
+    },
+    {
+        "name": "Awakened Earth's Strongest",
+        "ability": "Kamehameha Burst\nHits a random number of enemies in the party for 5% damage. For each enemy hit this cards damage is increased by 5%.",
+        "damage": "855",
+        "hp": "1.71K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/7,500,000"
+    },
+    {
+        "name": "Awakened Frost Demon",
+        "ability": "Icy Reign\nCreates a field of ice on entry that lasts up to 5 turns while the user is alive.\nWhile active, opponents have a 65% chance of being frozen for 1 turn after attacking.",
+        "damage": "1.57K",
+        "hp": "3.14K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/60,000,000"
+    },
+    {
+        "name": "Awakened Galactic Tyrant",
+        "ability": "Death Energy\nReduces an opponent's health by 20% and heal for 10% health before attacking.",
+        "damage": "915",
+        "hp": "1.83K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/10,000,000"
+    },
+	{
+		"name": "Ancient King of Curses",
+		"ability": "Malevolent Shrine Domain\nThis card has a 35% chance to cancel the enemy attack and counter attack with 5 slashes each doing 10% of this card's maximum health.\nIf this card successfully blocks two consecutive attacks, create a domain with a power level equal to this card's damage that lasts for 3 turns.\nWhile active, all enemies inside the domain are dealt 25% of this card's damage each turn.\nDomains can only be activated once per party, and can only activate if there is no domain currently active or if the new domain is more powerful than the previous.\nThis card's domain is cancelled on death.",
+		"damage": "7.31K",
+		"hp": "14.62K",
+		"rarity": "basic",
+		"card_type": "Boss",
+		"source_list": "World Boss",
+		"drop_chance": "1/2,250,000,000"
+	},
+    {
+        "name": "Awakened King of Curses",
+        "ability": "Flamebloom Arrow\nEvery other turn, fire an arrow that pierces all enemies for 15% damage. Enemies hit suffer from a burn that deals 10% damage for 2 turns.\nWhen played last, when an off field ally card takes any damage, cancel it and counterattack the enemy for 125% damage.\nIf paired with Divine General have a 50% chance each turn to clear away any stuns, burns, freezes or bleeds.",
+        "damage": "6.49K",
+        "hp": "12.97K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "World Boss",
+        "drop_chance": "1/2,000,000,000"
+    },
+    {
+        "name": "Awakened Light Admiral",
+        "ability": "Light Jewel\nOn entry, unleash 5 to 15 Light Orbs, each dealing 10% damage to the first 2 enemies. This card has a 35% chance to dodge an attack and counterattack for 60% damage (limited to 2 dodges).",
+        "damage": "7.31K",
+        "hp": "14.62K",
+        "rarity": "basic",
+        "card_type": "Tower",
+        "source_list": "The Towers",
+        "drop_chance": "1/3,000,000,000"
+    },
+    {
+        "name": "Awakened Limitless Master",
+        "ability": "200% Purple\nChants on his first turn to charge up his 200% purple, skipping his basic attack.\nFires off maximum purple on his second turn, nuking every enemy card for 50% Damage.",
+        "damage": "2.55K",
+        "hp": "5.1K",
+        "rarity": "basic",
+        "drop_chance": "1/75,000,000"
+    },
+    {
+        "name": "Awakened Pale Demon Lord",
+        "ability": "Revolving Strikes\nRevives to full health once after dying and increases maximum health by 25%. After reviving, every attack strikes 2 to 5 times dealing 50% damage per hit.",
+        "damage": "1.83K",
+        "hp": "3.66K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/100,000,000"
+    },
+    {
+        "name": "Awakened Prideful Prince",
+        "ability": "Spirit Blast\nReduces an opponent's health by 20% each turn.",
+        "damage": "744",
+        "hp": "1.49K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/5,000,000"
+    },
+    {
+        "name": "Awakened Promised Child",
+        "ability": "Planetary Rasenbang\nOn entry, burn the opponent for 50% of this card's max health for 2 turns, and stun the opponent for 1 turn.",
+        "damage": "419",
+        "hp": "838",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/750,000"
+    },
+    {
+        "name": "Awakened Shadow Summoner",
+        "ability": "Shadow Creature\nSummons a shadow creature after attacking that deals 35% of this card's damage.",
+        "damage": "783",
+        "hp": "1.57K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/6,000,000"
+    },
+    {
+        "name": "Awakened Six-Eyed Slayer",
+        "ability": "Lunar Strike\nGain 50% bonus stats for every moon phase exclusive card in the party on entry.",
+        "damage": "1.68K",
+        "hp": "3.35K",
+        "rarity": "basic"
+    },
+    {
+        "name": "Awakened Wild Hunter",
+        "ability": "Rock\nBefore attacking, enhance this card's fist with Nen, causing the following attack to deal 50% more damage.",
+        "damage": "232",
+        "hp": "464",
+        "rarity": "basic",
+        "drop_chance": "1/250,000"
+    },
+    {
+        "name": "Bald Hero",
+        "ability": "One Punch\n5% chance to deal the opponent's maximum health as damage.\n(Can only activate once across all party members with this ability)",
+        "damage": "363",
+        "hp": "726",
+        "rarity": "basic",
+        "drop_chance": "1/1,000,000"
+    },
+    {
+        "name": "Bamboo Demon",
+        "ability": "Demon Art: Exploding Pact\nScatters blood on the floor which explodes after 2 turns dealing 20% of the opponent's maximum health.",
+        "damage": "88",
+        "hp": "176",
+        "rarity": "basic",
+        "drop_chance": "1/10,000"
+    },
+    {
+        "name": "Beast Giant",
+        "ability": "Beastly Rampage\nThrows 4 to 10 rocks after attacking, dealing 20% damage per rock.",
+        "damage": "1.44K",
+        "hp": "2.88K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/45,000,000"
+    },
+    {
+        "name": "Beast Tamer",
+        "ability": "Undead Summon\nAfter being damaged, counterattack dealing 50% of the damage taken.\nOn death, summon 2 Undead Knights at 35% of this card's stats. If paired with Nature Guardian, also summon an Undead General at 75% of this card's stats.\nThis card's summons have no skills. Summons can only be triggered once per battle across all summon skill users.",
+        "damage": "3.52K",
+        "hp": "7.05K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/450,000,000"
+    },
+    {
+        "name": "Berserker Shinigami",
+        "ability": "Devour\nRevives to 50% health and gains a 50% damage buff after the first time this card takes a fatal hit.",
+        "damage": "286",
+        "hp": "572",
+        "rarity": "basic"
+    },
+    {
+        "name": "Berserker Warrior",
+        "ability": "Uncontrolled Rage\nOn entry, this card gains 25% bonus damage and health for every fallen ally.\nFor every opponent this card defeats, the next attack begins with a ki blast that deals 125% of this card's damage.",
+        "damage": "1.83K",
+        "hp": "3.66K",
+        "rarity": "basic",
+        "card_type": "Tower",
+        "source_list": "The Towers",
+        "drop_chance": "1/10,000,000"
+    },
+    {
+        "name": "Bijuu Beast",
+        "ability": "Tail Swipe\nThis card has a 60% base chance to dodge an attack, which decreases by 16% every time an attack is dodged.",
+        "damage": "517",
+        "hp": "1.03K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/1,500,000"
+    },
+    {
+        "name": "Biscuit Warrior",
+        "ability": "Biscuit Barrage\nFor every 10% health that this card loses, summons a soldier that does 25% follow up damage after this card attacks.",
+        "damage": "1.83K",
+        "hp": "3.66K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/100,000,000"
+    },
+    {
+        "name": "Biwa Demon",
+        "ability": "Infinite Fortress\nThis card is allies with all cards in the same party named \"demon\", \"blood\" or \"undead\".\nWhile alive, grant all allies a shield for each ally in the party which blocks damage for 1 turn. Upon death, this card merges with the next ally, passing on 25% of its max HP and damage.\n(Note: Can only be activated once per round by the first non-active living party member with this skill.)",
+        "damage": "3.66K",
+        "hp": "7.32K",
+        "rarity": "basic",
+        "card_type": "Tower",
+        "source_list": "The Towers",
+        "drop_chance": "1/100,000,000"
+    },
+    {
+        "name": "Black Demon",
+        "ability": "Anti-Magic Slash\nHas 50% chance to reduce the effectiveness of the opponent's RNG-based skills by 50% after attacking.",
+        "damage": "186",
+        "hp": "372",
+        "rarity": "basic",
+        "drop_chance": "1/120,000"
+    },
+    {
+        "name": "Black Flame",
+        "ability": "Cursed Flame\nAfter this card is defeated, apply a burn that deals 5% maximum health and transfers across cards.",
+        "damage": "1.14K",
+        "hp": "2.29K",
+        "rarity": "basic",
+        "drop_chance": "1/50,000,000"
+    },
+    {
+        "name": "Black Swordsman",
+        "ability": "Dual Blades\nDeals a follow up attack that does 20% of an opponent's remaining health.",
+        "damage": "159",
+        "hp": "317",
+        "rarity": "basic",
+        "drop_chance": "1/70,000"
+    },
+    {
+        "name": "Blade Captain",
+        "ability": "Relentless Assault\n35% chance to dodge an attack. If an attack is dodged, quickly launch 3 slashes dealing 50% damage each.",
+        "damage": "1.57K",
+        "hp": "3.14K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/60,000,000"
+    },
+    {
+        "name": "Blade Rebel",
+        "ability": "Scissor Blade Reaper\nReduces the opponent's damage by 10% after every attack.",
+        "damage": "37",
+        "hp": "74",
+        "rarity": "basic",
+        "drop_chance": "1/500"
+    },
+    {
+        "name": "Blade Warrior",
+        "ability": "Precision Strike\nAfter this card is attacked, counterattack dealing 125% of this card's damage.",
+        "damage": "915",
+        "hp": "1.83K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/10,000,000"
+    },
+    {
+        "name": "Blood Fiend",
+        "ability": "Life line\n50% chance for this card's attacks deal an extra 30% damage in exchange for 15% maximum health each time.",
+        "damage": "771",
+        "hp": "1.54K",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/350,000"
+    },
+    {
+        "name": "Blue Slime",
+        "ability": "Predator Mode\nAfter attacking, heal for 40% of the damage dealt to the opponent.",
+        "damage": "704",
+        "hp": "1.41K",
+        "rarity": "basic",
+        "drop_chance": "1/10,000,000"
+    },
+    {
+        "name": "Body Switcher",
+        "ability": "Body Change\nCopy 15% of the opponent's base stats and add it to this card on entry.",
+        "damage": "564",
+        "hp": "1.13K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/2,000,000"
+    },
+    {
+        "name": "Candy Master",
+        "ability": "Sweet Trap\nAfter every turn gain one of the following buffs:\n- +10% health\n- +10% attack\n- Dodge the next attack",
+        "damage": "1.39k",
+        "hp": "2.78k",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/40,000,000"
+    },
+    {
+        "name": "Cat Burglar",
+        "ability": "Thunderbolt Tempo\n25% chance to summon a thunderbolt after every attack, disabling an enemy card's ability for 1 turn and inflicting 10% of your damage.",
+        "damage": "15",
+        "hp": "30",
+        "rarity": "basic",
+        "drop_chance": "1/25"
+    },
+    {
+        "name": "Catastrophe Mage",
+        "ability": "Doomsday\nWhen this card is defeated summon a magic circle that deals 220% of this card's damage to the enemy card and reduces all enemy damage by 10%.\nLiving allies with \"Mage\", \"Ghoul\", \"Blood\", or \"Fiend\" in their name will steal and evenly split 15% of the enemy party's total max HP (or remaining health if below 15% max HP).",
+        "damage": "6.25k",
+        "hp": "12.5k",
+        "rarity": "basic",
+        "card_type": "Tower",
+        "source_list": "The Towers",
+        "drop_chance": "1/2,500,000,000"
+    },
+    {
+        "name": "Celestial Warrior",
+        "ability": "Red Bind\nAfter each ally attacks, this card performs a follow-up strike, dealing 75% of its own damage. If this card is defeated, before Celestial Destroyer, grant Celestial Destroyer a 75% increase in both HP and damage.",
+        "damage": "3.34k",
+        "hp": "6.68k",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/350,000,000"
+    },
+    {
+        "name": "Chain User",
+        "ability": "Scarlet Eyes\nWhen attacked, this card has a 65% chance to heal 20% of it's max HP using Holy Chain.\nIf the opponent's attack is higher, this card has a 20% chance of applying Judgement Chain, dealing 60% of this card's max HP plus an additional 10% for each attack the enemy has performed after 3 turns.",
+        "damage": "1.94k",
+        "hp": "3.88k",
+        "rarity": "basic",
+        "drop_chance": "1/80,000,000"
+    },
+    {
+        "name": "Chainsaw Fiend",
+        "ability": "Chainsaw Strike\nAttacks have a 25% chance to cause the opponent to bleed 10% max HP for 2 turns.",
+        "damage": "11",
+        "hp": "22",
+        "rarity": "basic",
+        "drop_chance": "1/10"
+    },
+    {
+        "name": "Childish Demon",
+        "ability": "Wooden Dragon\nOn entry, randomly picks between one of the following abilities:\n- Strike the opponent with lightning, stunning them for 1 turn.\n- Poisoning the opponent, causing them to lose 10% of their maximum health for 2 turns.\n- Shoot off a shockwave, dealing 150% of this card's damage.",
+        "damage": "996",
+        "hp": "1.99k",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/15,000,000"
+    },
+    {
+        "name": "Chimera Ant King",
+        "ability": "Aura Synthesis\nEach time this card is attacked, heal this card for 15% of its max HP and gain a stack of aura (5 stacks max). This card performs an additional attack for each aura stack it has. Each additional attack deals 35% of this card's damage.",
+        "damage": "2.42k",
+        "hp": "4.85k",
+        "rarity": "basic",
+        "drop_chance": "1/150,000,000"
+    },
+    {
+        "name": "Chimera Ant Cat",
+        "ability": "Master Puppeteer\nEach turn before an ally or this card attacks, choose 1 of the following moves to apply on the active card:\n- Heal the active card by 15% of its max health\n- Deals 15% of the enemy's damage to themselves and stun the enemy for 1 turn.\n- The enemy's next attack will be counter-attacked for 20% of the intended damage.\n(Can only trigger up to 8 times across all party members with this ability, and can only be activated by one user per round.)",
+        "damage": "3.85k",
+        "hp": "7.7k",
+        "rarity": "basic",
+        "drop_chance": "1/600,000,000"
+    },
+    {
+        "name": "Combat Giant",
+        "ability": "Titan's Wrath\nThe first time this card takes a fatal blow, transform and revive with 250% maximum health and gain a 35% damage buff.",
+        "damage": "1.68k",
+        "hp": "3.35k",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/75,000,000"
+    },
+    {
+        "name": "Compass Demon",
+        "ability": "Crimson Fist\nOn entry, curse the opponent, causing all RNG-based abilities to be minimally effective or fail.\nAfter being damaged, counter attack for 50% of the damage received.",
+        "damage": "1.39k",
+        "hp": "2.78k",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/40,000,000"
+    },
+    {
+        "name": "Copy Ninja",
+        "ability": "Sharingan Reflection\n25% chance to reflect an enemy's attack, damaging their whole party for 25% of this card's max health.\nNote: This skill can only activate once per party, even if multiple copies of this card are present.",
+        "damage": "334",
+        "hp": "668",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/350,000"
+    },
+    {
+        "name": "Cosmic Villain",
+        "ability": "Power Storage\nStores all damage taken while on the field. When this card is defeated, increase all ally's attack by 35% of the damage stored.\n(This skill can only activate twice per party)",
+        "damage": "2.64k",
+        "hp": "5.28k",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/10,000,000"
+    },
+    {
+        "name": "Creator of Flames",
+        "ability": "Ignited World\nFor every card with the name \"Flame\" in the party, this card can revive once.\nIf this card is the first party member with Ignited World, enemies with either \"Flame\", \"Deity\", \"Empress\", or \"King\" in their name have a 50% chance to have their ability disabled for 1 turn after each attack.",
+        "damage": "3.43k",
+        "hp": "6.98k",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Raid Boss Cards",
+        "drop_chance": "1/500,000,000 (500 Boss Material From the Creator Of Flames Raid)"
+    },
+    {
+        "name": "Crimson Demon",
+        "ability": "Explosionnn!\nOn Entry, this card attacks with 5x damage, but will stun herself for 1 turn afterwards.\n(Can only activate once across all party members with this ability)",
+        "damage": "2.4k",
+        "hp": "4.9k",
+        "rarity": "basic",
+        "drop_chance": "1/10,000,000"
+    },
+    {
+        "name": "Crimson Empress",
+        "ability": "Temptation\nHas a 40% chance to possess the opponent after being attacked, causing the opponent to attack a random card in their party for 60% of their damage.",
+        "damage": "1.39k",
+        "hp": "2.78k",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/2,500,000"
+    },
+    {
+        "name": "Crimson Eyes",
+        "ability": "Chain Control\nStuns the opponent for 1 turn on entry.",
+        "damage": 18,
+        "hp": 36,
+        "rarity": "basic",
+        "drop_chance": "1/45"
+    },
+    {
+        "name": "Crimson Vampire",
+        "ability": "Blood Pact\nWhen defeated, this card has a 50% to revive back to full HP. (Only activates once)",
+        "damage": 257,
+        "hp": 514,
+        "rarity": "basic",
+        "drop_chance": "1/350,000"
+    },
+    {
+        "name": "Crow Master",
+        "ability": "Illusionary Crows\nOn entry, this card has a 75% to gain a charge, which will allow it to block the first attack made against it.",
+        "damage": 88,
+        "hp": 176,
+        "rarity": "basic",
+        "drop_chance": "1/10,000"
+    },
+    {
+        "name": "Cursed Doll",
+        "ability": "Resonating Hammer\n50% chance to absorb 25% of the opponent's stats after attacking.",
+        "damage": 603,
+        "hp": 1210,
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/2,500,000"
+    },
+    {
+        "name": "Cursed Fist",
+        "ability": "Cursed Punch\n20% to curse the opponent's party after landing an attack, any attack this card lands on a cursed card will deal an extra 20% of this cards damage to the entire party.",
+        "damage": 915,
+        "hp": 1830,
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/10,000,000"
+    },
+    {
+        "name": "Dark Avenger",
+        "ability": "Amaterasu Flames\nApply 2 turns of black flames to an opponent after attacking, dealing 10% maximum health per turn.\nNote: This ability will not burn an opponent that is already burned.",
+        "damage": 119,
+        "hp": 238,
+        "rarity": "basic",
+        "drop_chance": "1/35,000"
+    },
+    {
+        "name": "Death Log",
+        "ability": "Written Fate\nInstantly defeat the opponent after 5 successful attacks.",
+        "damage": 142,
+        "hp": 284,
+        "rarity": "basic",
+        "drop_chance": "1/55,000"
+    },
+    {
+        "name": "Death Ninja",
+        "ability": "Reaper Summon\nUpon killing an enemy, summon the Reaper to steal their soul, storing 35% of the enemies max health and damage as a backup life. Every time you die, you revive using one of the stored lives.",
+        "damage": 1030,
+        "hp": 2070,
+        "rarity": "basic",
+        "card_type": "Tower",
+        "source_list": "The Towers",
+        "drop_chance": "1/1,500,000"
+    },
+    {
+        "name": "Demon Infernal",
+        "ability": "Hell Fire Explosion\nEach attack from this card explodes upon hitting the enemy, dealing an extra 25% damage for every ally with \"Infernal\", \"Flame\", or \"Fire\" in their name, up to a maximum of 175% damage",
+        "damage": 1410,
+        "hp": 2820,
+        "rarity": "basic"
+    },
+    {
+        "name": "Deranged Assassin",
+        "ability": "Godspeed\nAttacks twice, at the cost of losing 20% health after attacking the second time.",
+        "damage": 80,
+        "hp": 160,
+        "rarity": "basic",
+        "drop_chance": "1/7,500"
+    },
+    {
+        "name": "Deranged Clown",
+        "ability": "Bungee Gum\nOn entry, this card coats itself in Bungee Gum. For the next 2 turns, all incoming damage is bounced to the next enemy in the opponent's deck dealing 25% of the original amount. If there are no other cards in the opponent's party, this ability has no effect.",
+        "damage": 1710,
+        "hp": 3420,
+        "rarity": "basic",
+        "drop_chance": "1/40,000,000"
+    },
+    {
+        "name": "Deranged Curse",
+        "ability": "Idle Transfiguration\nWhen this card dies, trap the enemy in a bind for 2 turns making them unable to dodge attacks, and make all allied cards immune to the first stun dealt to them. During the bind, ally damage is increased by 10%.",
+        "damage": 2550,
+        "hp": 5100,
+        "rarity": "basic",
+        "card_type": "Tower",
+        "source_list": "The Towers",
+        "drop_chance": "1/30,000,000"
+    },
+    {
+        "name": "Destroyer Deity",
+        "ability": "Destruction Sphere\nAfter attacking, execute enemies below 15% health with an explosion",
+        "damage": 502,
+        "hp": 1000,
+        "rarity": "basic",
+        "drop_chance": "1/3,500,000"
+    },
+    {
+        "name": "Diamond Warrior",
+        "ability": "Brilliant Punk\nFor every 20% health lost, gain a shield that lasts 1 turn.",
+        "damage": 348,
+        "hp": 695,
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/250,000"
+    },
+    {
+        "name": "Dimensional Shifter",
+        "ability": "Dimensional Pull\nIf this card's damage is lower than the enemy's, it has a 40% chance to dodge the incoming attack by redirecting it into another dimension. The attack is then sent back at a random enemy card with 20% more power.\nCan only be activated 4 times across all party members with this ability.",
+        "damage": "7610",
+        "hp": "15220",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/250,000,000"
+    },
+	{
+    "name": "Divine General",
+    "ability": "Cursed Metamorphosis\nAfter each turn, gain 10% damage reduction and +7.5% stats (max 3). This card adapts up to 5 times per battle:\n- Heavy Damage: If hit for less than 50% HP, gain +25% max HP and heal 25%.\n- Light Damage: If hit for more than 50% HP, gain +30% damage; next attack deals 120%.\n- Status Effects: One turn after receiving a stun/freeze/burn, gain permanent immunity to that status effect. Repeated attempts grant +15% stats.\nThis Skill is limited to being used by one member per party",
+    "damage": "5.63K",
+    "hp": "11.26K",
+    "rarity": "basic",
+    "card_type": "Boss",
+    "source_list": "World Boss",
+    "drop_chance": "1/1,000,000,000"
+},
+    {
+        "name": "Divine Guide",
+        "ability": "Heavenly Blessing\nBoosts all allies maximum health by 15% on battle start.",
+        "damage": 2630,
+        "hp": 5260,
+        "rarity": "basic",
+        "drop_chance": "1/7,500,000"
+    },
+    {
+        "name": "Dragon King",
+        "ability": "Dragon King's Roar\nAfter attacking, this card has a 30% chance to confuse an opponent for 3 turns, causing them to damage themselves for 15% of the damage they deal.\nNote: Can only apply one stack of confusion at a time.",
+        "damage": "1.72K",
+        "hp": "3.43K",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/5,000,000"
+    },
+    {
+        "name": "Earth's Strongest",
+        "ability": "Kamehameha Wave\nCharge up for 1 turn, then release a blast which does 2x damage.",
+        "damage": "286",
+        "hp": "572",
+        "rarity": "basic",
+        "drop_chance": "1/500,000"
+    },
+	{
+		"name": "Eclipseborn Hawk",
+		"ability": "Abandoned Humanity\nUpon this card's first death, sacrifice 50% of your next card's HP and revive, using that card's stats combined with your original stats (up to a maximum of 350% of your base stats).\nWhen this card's HP falls below 40%, it has a 60% chance each turn to perform a follow-up attack that deals 125% damage.",
+		"damage": "8.48K",
+		"hp": "16.96K",
+		"rarity": "basic",
+		"card_type": "Moon Card",
+		"source_list": "Moon Cycle Cards",
+		"drop_chance": "1/300,000,000"
+	},
+    {
+        "name": "Elder Combat Giant",
+        "ability": "Liberated Leader\nWhen paired with \"Combat Giant\", this card can foresee the future, dodging the first 2 attacks from every enemy it faces. Each time it dodges, 10% of the avoided damage is converted into a damage buff for any ally card with \"Giant\" in its name.",
+        "damage": "3.35K",
+        "hp": "6.7K",
+        "rarity": "basic",
+        "card_type": "Tower",
+        "source_list": "The Towers",
+        "drop_chance": "1/75,000,000"
+    },
+    {
+        "name": "Elite Shadow Knight",
+        "ability": "Shadow's Wrath\nFor every Elite Shadow Knight alive in your party besides the user, this card attacks an additional time and deals 20% damage per attack on top of the last attack.",
+        "damage": "464",
+        "hp": "928",
+        "rarity": "basic"
+    },
+    {
+        "name": "Eminence Accountant",
+        "ability": "Eminent Bank\nWhen an ally with the word \"Eminence\" in their name dies, revive with 35% health. Cards can only be revived twice by this card, and cards will receive a 25% damage debuff when revived.",
+        "damage": "2.97K",
+        "hp": "5.94K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/250,000,000"
+    },
+    {
+        "name": "Eminence Scout",
+        "ability": "Arcane Surge\nWhen this card is defeated, increase all living allies HP and damage by 15% and debuff enemies HP and damage by 7.5%. Cards with \"Eminence\" in their name have the buff and debuff increased to 20%.",
+        "damage": "3.34K",
+        "hp": "6.68K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/350,000,000"
+    },
+    {
+        "name": "Eminence Strategist",
+        "ability": "Strategy Outline\nGrant all allies a 30% chance to dodge an attack while this card is alive. Cards with \"Eminence\" in their name have the dodge chance increased to 40%.\n(Chance does not stack with multiple users, and can only trigger up to 12 times across all party members with this ability)",
+        "damage": "3.85K",
+        "hp": "7.7K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/600,000,000"
+    },
+    {
+        "name": "Esper Prodigy",
+        "ability": "Psychic Burst\nGain damage equal to 100% of your missing health.",
+        "damage": "434",
+        "hp": "868",
+        "rarity": "basic",
+        "drop_chance": "1/2,000,000"
+    },
+    {
+        "name": "Eternal Dragon",
+        "ability": "Galaxy Roar\n50% chance to roar after every attack. Each roar grants a 25% stat boost",
+        "damage": "2.11K",
+        "hp": "4.22K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Raid Boss Cards",
+        "drop_chance": "1/100,000,000 (500 Boss Shards from the Eternal Dragon Raid)"
+    },
+    {
+        "name": "Eternal Mage",
+        "ability": "Timeless Wisdom\nHas a 40% chance to disable the enemy's ability while this card is attacking.",
+        "damage": "1.86K",
+        "hp": "3.71K",
+        "rarity": "basic",
+        "drop_chance": "1/250,000,000"
+    },
+    {
+        "name": "Fallen Deity",
+        "ability": "Orbs of Truth\nAttacks that deal less than 30% of your max health are countered with 135% damage. Upon death, if the enemy has lower damage than you, slash them for 125% damage and seal their ability for 1 turn.",
+        "damage": "6.58K",
+        "hp": "13.16K",
+        "rarity": "basic",
+        "card_type": "Tower",
+        "source_list": "The Towers",
+        "drop_chance": "1/3,000,000,000"
+    },
+    {
+        "name": "Final Shinigami",
+        "ability": "Inner Mugetsu\nRevive this card to 20% HP after death. Every ally defeated will give this card an additional 20% HP when it revives.",
+        "damage": "1.97K",
+        "hp": "3.95K",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/7,500,000"
+    },
+    {
+        "name": "Fire Dragon",
+        "ability": "Dragon Slayer's Roar\nAfter attacking, there is a 10% chance to burn the opponent's party for 2 turns, dealing 5% maximum health.\nNote: This ability will not burn cards that are already burning or are dead.",
+        "damage": "176",
+        "hp": "352",
+        "rarity": "basic",
+        "drop_chance": "1/100,000"
+    },
+    {
+        "name": "Flame Captain",
+        "ability": "Flame Shield\nOn entry, this card grants a one-use shield to itself and any ally that has \"Flame\" in their name, and increases their max HP by 35%. \n(This ability can only be activated once per battle even if there are multiple Flame Captains in the deck.)",
+        "damage": "1.83K",
+        "hp": "3.66K",
+        "rarity": "basic",
+        "drop_chance": "1/50,000,000"
+    },
+    {
+        "name": "Flame Cat",
+        "ability": "Inferno Blossom\nAfter the first enemy attack, Cat Instincts triggers, launching a fireball counter attack that does 125% damage and burns the enemy for 5% of their max hp over 3 turns. After each successful counter attack, all allied cards with \"Cat\" in their name gains a 10% increase to both damage and HP and becomes immune to burn effects.",
+        "damage": "1.23K",
+        "hp": "2.45K",
+        "rarity": "basic",
+        "drop_chance": "1/15,000,000"
+    },
+    {
+        "name": "Flame Deity",
+        "ability": "Unyielding Flame\nApplies a permanent burn to the opponent on entry dealing 10% maximum health. Every time an opponent burns, this card gains a stack. At 5 stacks against the player, executes the opponent.",
+        "damage": "859",
+        "hp": "1.72K",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/500,000"
+    },
+    {
+        "name": "Flame Head Captain",
+        "ability": "Superior Flame\nEvery turn, release a stack of flame aura that increases your health and damage by 30% (up to 3 stacks).\nAfter the aura reaches max stacks, reduce all damage taken by 35% and apply a burn to the field, which deals 40% of this card's damage each turn to any active opponent for 2 turns, or until the skill user is defeated.",
+        "damage": "8.89K",
+        "hp": "17.98K",
+        "rarity": "basic"
+    },
+    {
+        "name": "Flame Jester",
+        "ability": "Jester Game\nWhen this card dies, activate an attack dealing 65% of this card's damage. The death attack applies confusion to the enemy for 5 turns with each turn having a 60% chance to stun the enemy.\nNote: Confusion will not be re-applied if the opponent is already confused.",
+        "damage": "7.8K",
+        "hp": "15.59K",
+        "rarity": "basic"
+    },
+    {
+        "name": "Flame Paladin",
+        "ability": "Boundless Imagination\nWhen facing any card with the \"Dragon\", \"Villain\", or \"King\" in its name, this card gains 3x stats and reduces the opponent's stats by 25%",
+        "damage": "5.91K",
+        "hp": "11.83K",
+        "rarity": "basic"
+    },
+    {
+        "name": "Flame Summoner",
+        "ability": "Flame Manipulation\nStores 30% of the damage that any ally with \"Flame\" in it's name takes after each enemy attack.\nOn entry, detonate the stored damage on the current enemy.",
+        "damage": "2.25K",
+        "hp": "4.5K",
+        "rarity": "basic",
+        "drop_chance": "1/100,000,000"
+    },
+    {
+        "name": "Flame Tyrant",
+        "ability": "Twin Flame Explosion\nAfter every other attack, launch a fireball at the enemy, damaging the active party member for 10% max health and up to two other randomly picked enemies for 5% max health.",
+        "damage": "1.2K",
+        "hp": "2.4K",
+        "rarity": "basic"
+    },
+    {
+        "name": "Flame King of Destruction",
+        "ability": "Sun Wheel Slash\nThis card attacks twice. On the second attack, unleash the Sun Wheel. For each card in your party with \"Flame\" in its name, the Sun Wheel deals 60% more damage. Additionally, deal 100% more damage to any enemy card with \"Demon\" in its name.",
+        "damage": "9.6K",
+        "hp": "19.2K",
+        "rarity": "basic"
+    },
+    {
+        "name": "Flicker Ninja",
+        "ability": "Turn to Dust\nEach time this card is attacked, counter attack for 60% of this card's damage.\nWhen paired with \"Awakened Crow Master\" and below 30% HP, trigger False Reality Jutsu once, which stuns the opponent for 2 turns.",
+        "damage": "5.77K",
+        "hp": "11.55K",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/100,000,000"
+    },
+    {
+        "name": "Forest Clones",
+        "ability": "Chain Explosion\nThis card explodes on death for 120% of it's damage. For every Forest Clone in the party besides the user, the percentage increases by 100%.",
+        "damage": "1.41K",
+        "hp": "2.82K",
+        "rarity": "basic"
+    },
+    {
+        "name": "Forest Sage",
+        "ability": "Forest Blessing\nIncreases all allies health and damage by 25% after this card is defeated.",
+        "damage": "980",
+        "hp": "1.96K",
+        "rarity": "basic",
+        "drop_chance": "1/30,000,000"
+    },
+    {
+        "name": "Fragment of Light",
+        "ability": "Fragmented Defense\nAny card with the name \"Light\", \"Saint\" or \"Warrior\" has all damage dealt to them reduced by 50% while this card is alive.\nWhen this card takes any damage, there is a 30% chance to stun the opponent for 1 turn.\n(Only one card can activate this skill's damage reduction at a time.)",
+        "damage": "6.49K",
+        "hp": "12.97K",
+        "rarity": "basic"
+    },
+	{
+		"name": "Forsaken Knight",
+		"ability": "Severing Fate\nOn entry, immediately attack for 175% damage.\nEvery other turn, this card attacks twice with the second attack dealing 125% damage. Afterwards, buff this card's damage by 20% and heal for 10% of the damage dealt that turn.",
+		"damage": "9.52K",
+		"hp": "19.03K",
+		"rarity": "basic",
+		"card_type": "Moon Card",
+		"source_list": "Moon Cycle Cards",
+		"drop_chance": "1/425,000,000"
+	},
+    {
+        "name": "Frost Demon",
+        "ability": "Ice Bloom\nAfter the first successful attack, plant a seed which grows after 1 turn and freezes the opponent for 2 turns.",
+        "damage": "286",
+        "hp": "572",
+        "rarity": "basic",
+        "drop_chance": "1/500,000"
+    },
+    {
+        "name": "Galactic Tyrant",
+        "ability": "Death Strike\nOn entry, this card has a 30% chance to strike and deal 30% of the opponent's maximum health to their active card.",
+        "damage": "363",
+        "hp": "726",
+        "rarity": "basic",
+        "drop_chance": "1/1,000,000"
+    },
+    {
+        "name": "Genie Commander",
+        "ability": "Magic Overload\nAfter being attacked, this card will summon a genie that will either:\n- Reduce the opponent's damage by 35%\n- Disable the Opponent's Skill for 2 turns\n- Heal for 25% of this card's max health",
+        "damage": "915",
+        "hp": "1.83K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/10,000,000"
+    },
+    {
+        "name": "Golden King",
+        "ability": "Gate of Wealth\nDisable the opponent's ability for 1 turn upon entry.",
+        "damage": "22",
+        "hp": "44",
+        "rarity": "basic",
+        "drop_chance": "1/100"
+    },
+    {
+        "name": "Golden Vampire",
+        "ability": "The World\n20% Chance to freeze time after every attack, skipping the opponent's next 2 turns.",
+        "damage": "140",
+        "hp": "280",
+        "rarity": "basic",
+        "drop_chance": "1/50,000"
+    },
+    {
+        "name": "Golden Wind",
+        "ability": "Life Creation\nAfter attacking, heal up to 15% of this card's maximum HP.",
+        "damage": "62",
+        "hp": "123",
+        "rarity": "basic",
+        "drop_chance": "1/3,000"
+    },
+    {
+        "name": "Green Bomber",
+        "ability": "Acidic Attack\nExplodes on death, dealing this card's max health as damage.",
+        "damage": 7,
+        "hp": 14,
+        "rarity": "basic",
+        "drop_chance": "1/2"
+    },
+    {
+        "name": "Half-Demon Swordsman",
+        "ability": "Backlash Wave\nHave a 30% chance of absorbing the opponent's attack, increasing this card's damage by 15%.",
+        "damage": 55,
+        "hp": 109,
+        "rarity": "basic"
+    },
+    {
+        "name": "Healing Fist",
+        "ability": "Healing Field\nUpon entry, cast a jutsu that will heal allies for 10% maximum health whenever they take damage from a non-fatal attack. This spell will linger after this card is defeated.",
+        "damage": 341,
+        "hp": 682,
+        "rarity": "basic",
+        "drop_chance": "1/850,000"
+    },
+	{
+		"name": "Herald of Fate",
+		"ability": "Inevitable Destiny\nWhile alive, this card follows up after every ally's attack, dealing 30% damage and has a 60% chance to brand the enemy for 2 turns.\n- Branded enemies have a 40% chance for their attacks to be reflected back, dealing 40% of their own damage.\n- If an enemy dies while branded, this card absorbs 30% of their stats (Limited to 300% of base stats).\n- Enemies cannot be affected by more than one brand at a time.\n- When paired with Eclipseborn Hawk or Awakened Eclipseborn Hawk, this card has a 45% chance to save an ally from death, restoring them to 75% HP and granting a 1-turn shield. (each card can only be revived once)",
+		"damage": "10.09K",
+		"hp": "20.18K",
+		"rarity": "basic",
+		"card_type": "Moon Card",
+		"source_list": "Moon Cycle Cards",
+		"drop_chance": "1/550,000,000"
+	},
+    {
+        "name": "Homeroom Teacher",
+        "ability": "Failed Test\nEnter rage mode and gain 20% more attack and health on entry.",
+        "damage": 134,
+        "hp": 268,
+        "rarity": "basic",
+        "drop_chance": "1/40,000"
+    },
+    {
+        "name": "Ice Admiral",
+        "ability": "Ice Age\nOn entry, deal 125% damage and freeze the target for 1 turn.\nWhen this card's HP falls below 60%, summon an ice bird that deals 75% damage to the current enemy and 50% to the next, each with a 20% independent chance to freeze each enemy for 1 turn.\nThis card is immune to Freeze effects.",
+        "damage": "5.64k",
+        "hp": "11.3k",
+        "rarity": "basic",
+        "card_type": "Tower",
+        "source_list": "The Towers",
+        "drop_chance": "1/1,000,000,000"
+    },
+    {
+        "name": "Ice Dragon",
+        "ability": "Ice Wings\nApplies Permafrost after landing a successful attack on an opponent, which has a 50% chance every turn to freeze the opponent for 1 turn before they attack.",
+        "damage": 463,
+        "hp": 925,
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/350,000"
+    },
+    {
+        "name": "Ice Elf",
+        "ability": "Ice Spear\nEvery other attack, throw an Ice Spear that deals 60% of this card's damage to the enemy card and pierces through to the next. The spear has a 75% chance to freeze the first enemy on hit.",
+        "damage": "3.29k",
+        "hp": "6.58k",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/20,000,000"
+    },
+    {
+        "name": "Ice Empress",
+        "ability": "Frostbite\nFreezes opponent for 2 turns on death.",
+        "damage": 363,
+        "hp": 726,
+        "rarity": "basic",
+        "drop_chance": "1/1,000,000"
+    },
+    {
+        "name": "Ice Empress Shinigami",
+        "ability": "White Haze Punishment\nAfter every 2nd defense, there is a 50% chance to reduce the opponent's damage by 60%.",
+        "damage": "1.41k",
+        "hp": "2.82k",
+        "rarity": "basic",
+        "drop_chance": "1/100,000,000"
+    },
+    {
+        "name": "Infernal",
+        "ability": "Hell Fire\nExplode on death, dealing damage equal to 100% of your max HP. For each party member with \"Infernal\", \"Flame\", or \"Fire\" in their name, the explosion damage is increased by 20% up to a maximum of 160%.",
+        "damage": "1.14k",
+        "hp": "2.29k",
+        "rarity": "basic"
+    },
+    {
+        "name": "Insect Hashira",
+        "ability": "Wisteria Strike\n30% chance to disable the opponent's ability for 2 turns after attacking.",
+        "damage": 323,
+        "hp": 646,
+        "rarity": "basic",
+        "drop_chance": "1/750,000"
+    },
+    {
+        "name": "Integrity Knight",
+        "ability": "Enhance Armament\nWhen an ally is stunned or has their ability disabled, trigger a counterattack that cancels the effect and unleashes a blast dealing 200% of this card's damage. This effect can activate up to 2 times per battle.",
+        "damage": "1.41k",
+        "hp": "2.82k",
+        "rarity": "basic"
+    },
+    {
+        "name": "Juice Queen",
+        "ability": "Refreshing Burst\nWhen this card is attacked, the enemy loses 5% health. This card gains damage equivalent to the opponent's health drained.",
+        "damage": "2.41k",
+        "hp": "4.83k",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/250,000,000"
+    },
+    {
+        "name": "King of Curses",
+        "ability": "Cursed Slash\nThis card has a 25% chance to cancel the enemy attack, and then counter attack with 5 slashes each doing 10% of this card's maximum health.",
+        "damage": "1.27k",
+        "hp": "2.55k",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/30,000,000"
+    },
+    {
+        "name": "Knight of Light",
+        "ability": "Excalibur's Radiance\n20% chance to blind an enemy when being attacked, causing them to miss.",
+        "damage": 28,
+        "hp": 55,
+        "rarity": "basic",
+        "drop_chance": "1/200"
+    },
+    {
+        "name": "Last Avenger",
+        "ability": "Nitjutsu\nOn entry, strike the enemy for 200% damage and stun for 1 turn.\nAny burn attempts are negated and reflected back at 50% power.",
+        "damage": "9.87k",
+        "hp": "19.73k",
+        "rarity": "basic"
+    },
+    {
+        "name": "Light Admiral",
+        "ability": "Flash\nCauses a flashbang on entry, reducing the attack of the opposing party by 10%.",
+        "damage": 44,
+        "hp": 88,
+        "rarity": "basic",
+        "drop_chance": "1/1,000"
+    },
+    {
+        "name": "Light Saintess",
+        "ability": "Light Speed\nDodge the first enemy attack and counter attack for this card's damage and stun the opponent for 1 turn.",
+        "damage": "2.27K",
+        "hp": "4.55K",
+        "rarity": "basic",
+        "drop_chance": "1/150,000,000"
+    },
+    {
+        "name": "Limitless Master",
+        "ability": "Purple\nWhen below 50% HP, Have a 50% chance to fire off purple doing 150% Damage.",
+        "damage": "1.07K",
+        "hp": "2.14K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/20,000,000"
+    },
+    {
+        "name": "Lost Hunter",
+        "ability": "Three-Sword Style\nWhen attacking an opponent, have a 30% chance to attack twice.",
+        "damage": 140,
+        "hp": 280,
+        "rarity": "basic",
+        "drop_chance": "1/50,000"
+    },
+    {
+        "name": "Love Hashira",
+        "ability": "Ribbon Slash\nRandomly slashes 3 to 5 times dealing 30% damage per slash. If this card slashes 5 times, apply 5% maximum health bleed for 2 turns.",
+        "damage": 809,
+        "hp": "1.62K",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/3,000,000"
+    },
+    {
+        "name": "Lunar Angel",
+        "ability": "Empowered Swing\nAttacks have a 25% chance to deal bonus damage equal to 75% of this card's maximum health to the opponent.",
+        "damage": 383,
+        "hp": 765,
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/250,000"
+    },
+    {
+        "name": "Lunar Beast",
+        "ability": "Moonlit Strike\nGains 10% bonus stats for each ally card with \"Lunar\" in its name. While battling a Moon Cycle card, gains 1 extra attack per turn. Automatically counterattacks any enemy with higher damage for 20% of this card's damage, with a 30% chance to stun.",
+        "damage": "5.07K",
+        "hp": "10.14K",
+        "rarity": "basic",
+        "card_type": "Tower",
+        "source_list": "The Towers",
+        "drop_chance": "1/1,000,000,000"
+    },
+    {
+        "name": "Lunar Guardian",
+        "ability": "Moonlit Resonance\nGains bonus health and damage during the following moon cycles:\n- Snow, Harvest, and Full Moon: 50%\n- Blood Moon: 100%\n- Wolf Moon: 150%\n- Blue Moon: 200%\n- Monarch and Eclipse Moon: 300%\n- Tsukuyomi and Inferno Moon: 350%",
+        "damage": 980,
+        "hp": "1.96K",
+        "rarity": "basic",
+        "drop_chance": "1/30,000,000"
+    },
+    {
+        "name": "Magma Admiral",
+        "ability": "Magma Hound\nStrike the enemy with 1 to 3 magma fists each doing 85% of this card's damage.\nWhen HP falls below 40% summon a magma hound that deals 85% damage to the current enemy and 60% to the next, each with a 20% independent chance to be inflicted with burn for 15% damage for 1 turn.\nThis card is immune to Burn effects.",
+        "damage": "6.5K",
+        "hp": "13.05K",
+        "rarity": "basic",
+        "card_type": "Tower",
+        "source_list": "The Towers",
+        "drop_chance": "1/2,000,000,000"
+    },
+    {
+        "name": "Masked Emperor",
+        "ability": "Geass Command\nAfter each attack, command the opponent to damage themselves for 20% of their current damage.",
+        "damage": 168,
+        "hp": 336,
+        "rarity": "basic",
+        "drop_chance": "1/85,000"
+    },
+    {
+        "name": "Master Manipulator",
+        "ability": "Overgrown\nWhile this card is in position, if an opponent attempts to boost their stats by more than 25% of their base stats, absorb and convert the excess stats into an effect that deals damage equal to the absorbed amount of total stats over 2 turns. This effect consumes 30% of this card's max HP, and is disabled when below 30% max HP.",
+        "damage": "1.79K",
+        "hp": "3.58K",
+        "rarity": "basic"
+    },
+    {
+        "name": "Metal Alchemist",
+        "ability": "Fullmetal Transmutation\nHave a 30% chance of deflecting an opponent's attack back to them, dealing 12% of the original damage.",
+        "damage": 32,
+        "hp": 63,
+        "rarity": "basic",
+        "drop_chance": "1/350"
+    },
+    {
+        "name": "Mist Hashira",
+        "ability": "Mist Breathing\nThis card has a 10% base chance to dodge attacks, which goes up by 5% for every 10% of health missing.",
+        "damage": 572,
+        "hp": "1.14K",
+        "rarity": "basic",
+        "drop_chance": "1/5,000,000"
+    },
+    {
+        "name": "Mochi Emperor",
+        "ability": "Elusive Mochi Strike\n50% chance to dodge an attack. For every attack dodged, this card gains a mochi. When this card has 4 mochis, deal 30% of this card's maximum health as damage to the enemy party.",
+        "damage": "2.97K",
+        "hp": "5.94K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/500,000,000"
+    },
+    {
+        "name": "Muscle Head",
+        "ability": "Berserker Strike\nDeals 12% of an enemy's maximum health on entry.",
+        "damage": 58,
+        "hp": 116,
+        "rarity": "basic",
+        "drop_chance": "1/2,500"
+    },
+    {
+        "name": "Namekian Sage",
+        "ability": "Special Beam Cannon\n60% chance to critical hit, dealing 75% more damage.",
+        "damage": 653,
+        "hp": "1.31K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/3,500,000"
+    },
+    {
+        "name": "Nature Guardian",
+        "ability": "When an ally's HP falls below 65% from a non-fatal blow, this card has a 75% chance to fully restore their health. Each time this card heals, it reduces the chance of restoring health by 15%. This card dies after healing 2 times. If paired with Beast Tamer, this card can heal up to 4 times, being left at 20% HP instead of dying, and the chance reduction is reduced from 15% to 10%.",
+        "damage": "2.09k",
+        "hp": "4.17k",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/350,000,000"
+    },
+    {
+        "name": "Nekomata",
+        "ability": "Senjutsu and Youjutsu Before attacking, summons a random flame that randomly does one of the following actions: - Heal this card for 10% maximum health. - Decrease the opponent's next attack by 10%. - Increase this card's next attack by 10%.",
+        "damage": "545",
+        "hp": "1.09k",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/1,000,000"
+    },
+    {
+        "name": "Ninja Heiress",
+        "ability": "8 Pillar Comet Every other turn, before this card attacks, unleash a massive fire style jutsu that deals 125% of this card's damage and burns the enemy for 20% damage over 2 turns. On entry, When paired with Flicker Ninja or Awakened Crow Master, trigger a one-time ultimate attack that damages the entire enemy party for 20% of their max HP (The ultimate attack can only trigger once per battle).",
+        "damage": "8.78k",
+        "hp": "17.56k",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/400,000,000"
+    },
+    {
+        "name": "Null",
+        "ability": "Universe Pull When this card is attacked, there is a 35% chance that it will create a black hole, mitigating the opponent's attack and turns 30% of the damage into a damage buff.",
+        "damage": "4.29k",
+        "hp": "8.57k",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/50,000,000"
+    },
+    {
+        "name": "Pale Demon Lord",
+        "ability": "Blood Curse Marks an opponent when they enter the field, each opponent enemy increases this card's damage by 20%.",
+        "damage": "195",
+        "hp": "389",
+        "rarity": "basic",
+        "drop_chance": "1/150,000"
+    },
+    {
+        "name": "Peaceful Swordsman",
+        "ability": "Water Exhalation After attacking, has a 60% chance to unleash 5 more attacks that deal 10% damage each.",
+        "damage": 140,
+        "hp": 280,
+        "rarity": "basic",
+        "drop_chance": "1/50,000"
+    },
+    {
+        "name": "Phantom Assassin",
+        "ability": "Pain Packer For every 20% health missing, perform an addition attack that does 120% more damage. The additional attack damage is increased to 130% when partied with Phantom Leader.",
+        "damage": "3.34k",
+        "hp": "6.68k",
+        "rarity": "basic",
+        "drop_chance": "1/350,000,000"
+    },
+    {
+        "name": "Phantom Leader",
+        "ability": "Sun and Moon After each attack, mark the active enemy with Sun and another enemy in the party with Moon. The enemy marked with moon will take the same damage as the enemy marked with Sun. This ability will reset if the active card dies.",
+        "damage": "1.13k",
+        "hp": "2.25k",
+        "rarity": "basic",
+        "drop_chance": "1/10,000,000"
+    },
+    {
+        "name": "Prideful Prince",
+        "ability": "Final Flash Each attack has a 20% Chance to pierce through the enemy, dealing 50% damage to the next party member in line.",
+        "damage": "232",
+        "hp": "464",
+        "rarity": "basic",
+        "drop_chance": "1/250,000"
+    },
+    {
+        "name": "Promised Child",
+        "ability": "Rasenbang Has a 30% chance to release a burst of wind before attacking, causing the following attack to deal an extra 20% damage, and to heal for up to 10% of this card's maximum health.",
+        "damage": "109",
+        "hp": "217",
+        "rarity": "basic",
+        "drop_chance": "1/20,000"
+    },
+    {
+        "name": "Psycho Stalker",
+        "ability": "Future Diary This card has a 25% to dodge attacks, and then follow up with a counter attack that deals 30% of this card's damage.",
+        "damage": "277",
+        "hp": "554",
+        "rarity": "basic",
+        "drop_chance": "1/450,000"
+    },
+    {
+        "name": "Red Dragon Emperor",
+        "ability": "Divine Boost Increases this card's attack by 10% every turn. If White Dragon Emperor is in the party, this effect is increases to 20% every turn.",
+        "damage": "1.72k",
+        "hp": "3.43k",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/5,000,000"
+    },
+    {
+        "name": "Red Emperor",
+        "ability": "Conqueror's Haki On entry, reduce the entire opposing party's damage by 20%.",
+        "damage": "363",
+        "hp": "726",
+        "rarity": "basic",
+        "drop_chance": "1/1,000,000"
+    },
+    {
+        "name": "Red Pilot",
+        "ability": "Sync Boost Boosts damage of all party members by 15% while this card is alive and in the party.",
+        "damage": "377",
+        "hp": "753",
+        "rarity": "basic",
+        "drop_chance": "1/1,250,000"
+    },
+    {
+        "name": "Rika's Blessing",
+        "ability": "Rika's Roar Increases itself and all allies attack by 10% after every attack.",
+        "damage": "996",
+        "hp": "1.99k",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/15,000,000"
+    },
+    {
+        "name": "Ripple Knight",
+        "ability": "Sunlight Yellow Overdrive After attacking, heal for 10% of the damage dealt to the opponent.",
+        "damage": "64",
+        "hp": "127",
+        "rarity": "basic",
+        "drop_chance": "1/3,500"
+    },
+    {
+        "name": "Sacred Ronin",
+        "ability": "Swordsman's Resolve\nSurvive the first fatal attack with 1 health.",
+        "damage": 32,
+        "hp": 63,
+        "rarity": "basic",
+        "drop_chance": "1/350"
+    },
+    {
+        "name": "Science King",
+        "ability": "Genius Solution\nRandomly picks between gaining 15% health or 15% increased damage on entry.",
+        "damage": 9,
+        "hp": 18,
+        "rarity": "basic",
+        "drop_chance": "1/4"
+    },
+    {
+        "name": "Sentinel Statue",
+        "ability": "The System\nAllies have a 50% chance to revive with 75% health (once per card) while this card is alive. If this card is the last one played, it enters with +75% max health.",
+        "damage": 5.15,
+        "hp": 10.3,
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/75,000,000"
+    },
+    {
+        "name": "Seven Sea King",
+        "ability": "King's Vessel\nSelects a form after defeating each enemy.\n- Ice Form: 40% chance to freeze enemies for 2 turns.\n- Lightning Form: 50% chance to deal 50% more damage.\n- Dark Form: 40% chance to dodge an attack",
+        "damage": 2.46,
+        "hp": 4.93,
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/10,000,000"
+    },
+    {
+        "name": "Shadow Bear",
+        "ability": "Tank\nWhenever this card is attempted to be stunned or have it's skill disabled, cancel the effect and gain a charge for 15% more damage and health per charge (up to 3 charges).",
+        "damage": 3.21,
+        "hp": 6.43,
+        "rarity": "basic",
+        "drop_chance": "1/400,000,000"
+    },
+    {
+        "name": "Shadow Dragon",
+        "ability": "Dragon's Fear\nOn entry, decrease the damage stat of all opposing party members by 60% for 2 turns. If the current opponent card has lower damage, this card will stun the opponent for 1 turn.",
+        "damage": 2.69,
+        "hp": 5.38,
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Raid Boss Cards",
+        "drop_chance": "1/200,000,000 (500 Boss Shards from the Shadow Dragon Raid)"
+    },
+    {
+        "name": "Shadow Duelist",
+        "ability": "Dark Judgement\nWhen attacked, there is a 25% chance to redirect the attack to the opponent's next card for 40% of the intended damage, if the next opponent card exists and is alive.",
+        "damage": 1.41,
+        "hp": 2.82,
+        "rarity": "basic",
+        "drop_chance": "1/100,000,000"
+    },
+    {
+        "name": "Shadow General",
+        "ability": "Hymn\nBefore an ally or this card attacks, there is a 10% chance for each turn to cast:\n- Heal for 20% max health\n- Shield for 1 turn\n- 50% damage buff\n- Burn for 15% max health lasting 2 turns.\nEach effect rolls separately, multiple can activate each turn.\nCan only be activated up to 7 times across all party members, and can only be used by one party member per round.\nGains a one-time 50% stat buff when in a party with an Awakened Shadow Monarch.",
+        "damage": 6.06,
+        "hp": 12.12,
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/150,000,000"
+    },
+    {
+        "name": "Shadow Grand Marshal",
+        "ability": "Shadow Army\nAfter each enemy attack, counterattack for 75% damage.\nWhen HP falls below 75%, there is a 60% chance to summon 2 Elite Shadow Knights with 50% of your stats. They retain their original abilities.\nSummons can only be triggered once per battle across all summon skill users.",
+        "damage": 9.14,
+        "hp": 18.29,
+        "rarity": "basic"
+    },
+    {
+        "name": "Shadow Knight",
+        "ability": "Shadow Slash\nAttacks again for every Shadow Knight alive in your party besides the user.",
+        "damage": 363,
+        "hp": 726,
+        "rarity": "basic"
+    },
+    {
+        "name": "Shadow Monarch",
+        "ability": "Defenseless\nThis card takes an extra 10% damage from attacks",
+        "damage": 176,
+        "hp": 352,
+        "rarity": "basic"
+    },
+    {
+        "name": "Shadow Summoner",
+        "ability": "Cursed Beast Strike\nHas a 15% chance to strike with a dark aura that does 5x damage after attacking.",
+        "damage": 19,
+        "hp": 38,
+        "rarity": "basic",
+        "drop_chance": "1/60"
+    },
+    {
+        "name": "Six Paths of Pain",
+        "ability": "Shinra Tensei\nOn entry, stun the enemy for 2 turns, Gain a 35% damage buff for 2 turns when the opponent is stunned.",
+        "damage": 472,
+        "hp": 943,
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/1,000,000"
+    },
+    {
+        "name": "Snake Empress",
+        "ability": "Love Gaze\nEvery time this card is attacked, gain a charge. At 3 charges, heal for 40% max health and freeze the opponent for 2 turns.",
+        "damage": 904,
+        "hp": 1.8,
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/3,500,000"
+    },
+    {
+        "name": "Snake Hashira",
+        "ability": "Serpent Breathing\n20% chance to dodge an attack every turn.",
+        "damage": 257,
+        "hp": 514,
+        "rarity": "basic",
+        "drop_chance": "1/350,000"
+    },
+    {
+        "name": "Soul King",
+        "ability": "Judgement Day\nAfter defeating an enemy, randomly absorb 15% to 40% of their maximum health and damage.",
+        "damage": 3.68,
+        "hp": 7.35,
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/30,000,000"
+    },
+    {
+        "name": "Star Fist",
+        "ability": "Star Platinum's Barrage\n50% chance to attack again. Each subsequent attack decreases this chance by 10%.",
+        "damage": 42,
+        "hp": 84,
+        "rarity": "basic",
+        "drop_chance": "1/750"
+    },
+    {
+        "name": "Stark Gunner",
+        "ability": "Cero Rapid Fire\nWhen this card is stunned, receive a 75% damage buff towards the next attack.",
+        "damage": 195,
+        "hp": 389,
+        "rarity": "basic",
+        "drop_chance": "1/150,000"
+    },
+    {
+        "name": "Stone Hashira",
+        "ability": "Stone Breathing\nWhenever attacked, this card has a 40% chance to transfer any present burn, stun, or skill disable effects to the enemy.",
+        "damage": "2K",
+        "hp": "4K",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/5,000,000"
+    },
+    {
+        "name": "Straw Hat",
+        "ability": "Jet Pistol\nReduce the opponent's health by 15% at the start of this card's turn.",
+        "damage": 232,
+        "hp": 464,
+        "rarity": "basic",
+        "drop_chance": "1/250,000"
+    },
+    {
+        "name": "Sun Blaze Shinigami",
+        "ability": "Incinerate\nWhen defeated, permanently apply red flames to all enemy party members, which deal 5% maximum health if the card is active, or 2.5% if they are not active.",
+        "damage": 657,
+        "hp": "1.31K",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/1,500,000"
+    },
+    {
+        "name": "Sun Deity",
+        "ability": "Boundless Freedom\nAttacks randomly deal 60% to 150% damage",
+        "damage": 286,
+        "hp": 572,
+        "rarity": "basic",
+        "drop_chance": "1/500,000"
+    },
+    {
+        "name": "Sun Lion",
+        "ability": "Solar Flare\nGains 100% more damage and health during a Harvest Moon Cycle.",
+        "damage": 464,
+        "hp": 928,
+        "rarity": "basic",
+        "drop_chance": "1/2,500,000"
+    },
+    {
+        "name": "Surgeon Of Death",
+        "ability": "Mes\nGrabs the opponents heart, reducing their attack by 10% every turn.",
+        "damage": 210,
+        "hp": 420,
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/50,000"
+    },
+    {
+        "name": "Survey Commander",
+        "ability": "Tactical Advantage\nOn entry, grant a buff to all allies that increases damage by 20%. For every ally buffed, this card gains 15% damage.",
+        "damage": 683,
+        "hp": "1.37K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/4,000,000"
+    },
+    {
+        "name": "Sword Deity",
+        "ability": "Absolute Reflection\nOn entry, launch an attack dealing 125% damage. When this card is below 50% HP, gain a shield that activates every other turn, reducing damage by 80% and healing 30% max HP.",
+        "damage": "3.9K",
+        "hp": "7.8K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Raid Boss Cards",
+        "drop_chance": "1/750,000,000 (500 Boss Material from the Sword Deity Raid)"
+    },
+    {
+        "name": "Sword Saint",
+        "ability": "Star Splash\nAfter attacking, damage the enemy's entire party by 5% of their maximum health.",
+        "damage": 286,
+        "hp": 572,
+        "rarity": "basic",
+        "drop_chance": "1/500,000"
+    },
+    {
+        "name": "Terrible Tornado",
+        "ability": "Psychic Reflect\nThis card will reflect the first attack against it back at the attacker, dealing 30% of the intended damage.",
+        "damage": 490,
+        "hp": 980,
+        "rarity": "basic",
+        "drop_chance": "1/3,000,000"
+    },
+    {
+        "name": "The Goliath",
+        "ability": "Overwhelming Violence\nBefore this card's first attack against any opponent, if the opponent's card rarity is equal or lower than this card's rarity, they receive a 50% stat debuff for 3 turns.",
+        "damage": "2.76K",
+        "hp": "5.52K",
+        "rarity": "basic",
+        "drop_chance": "1/235,000,000"
+    },
+    {
+        "name": "The Impure Ghost",
+        "ability": "Susanno\nSummons a rib cage that protects the card for 2 turns.",
+        "damage": 704,
+        "hp": "1.41K",
+        "rarity": "basic",
+        "drop_chance": "1/10,000,000"
+    },
+    {
+        "name": "The Irregular",
+        "ability": "March's Power\nIncreases damage and health by 25% after landing a fatal blow on an opponent.",
+        "damage": 72,
+        "hp": 143,
+        "rarity": "basic",
+        "drop_chance": "1/5,000"
+    },
+    {
+        "name": "Thorn Maiden",
+        "ability": "Greedy Thorn\nEach time this card is attacked, reduce the incoming damage by 35% and convert 50% of the reduced damage into a bonus max HP buff for all party members.\nCan only be activated 2 times across all party members, even with multiple Thorn Maidens. Bonus HP can't go above 300% of this card's base HP stat.",
+        "damage": "1.79K",
+        "hp": "3.58K",
+        "rarity": "basic"
+    },
+    {
+        "name": "Thunder Demon",
+        "ability": "Lightning Surge\n30% chance to deal 10% damage towards 1 to 4 enemies before every turn. For each enemy hit by this ability, increases this card's damage by 5%.",
+        "damage": 783,
+        "hp": 1570,
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/6,000,000"
+    },
+    {
+        "name": "Thunder Flash",
+        "ability": "Thunder Breathing\nHave a 30% chance to summon a lighting bolt, boosting your damage by 30% on the next turn.",
+        "damage": 68,
+        "hp": 136,
+        "rarity": "basic",
+        "drop_chance": "1/4,000"
+    },
+    {
+        "name": "Titania",
+        "ability": "Requip Mastery\nBlocks attacks that deal less than 25% of your maximum health.",
+        "damage": 213,
+        "hp": 426,
+        "rarity": "basic",
+        "drop_chance": "1/200,000"
+    },
+	{
+		"name": "Tormented Swordsman",
+		"ability": "Defying Will\nOn entry, if any ally is dead, this card gains a 40% stat buff.\nFor every 30% HP lost, this card gains an additional attack. (Max 3)\nThis card will survive the first fatal attack with 1 HP.\nThis skill is limited to being used by one member per party.",
+		"damage": "7.71K",
+		"hp": "15.41K",
+		"rarity": "basic",
+		"card_type": "Moon Card",
+		"source_list": "Moon Cycle Cards",
+		"drop_chance": "1/200,000,000"
+	},
+    {
+        "name": "Ultimate Warrior",
+        "ability": "Masenko Blast\nDeals double damage to cards stronger than this card.",
+        "damage": 472,
+        "hp": 943,
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/1,000,000"
+    },
+    {
+        "name": "Undead Actor",
+        "ability": "Black Hole\nWhen an enemy is defeated by this card, 25% of their stats are absorbed and evenly distributed among all living party members.",
+        "damage": 7030,
+        "hp": 14050,
+        "rarity": "basic",
+        "card_type": "Tower",
+        "source_list": "The Towers",
+        "drop_chance": "1/4,000,000,000"
+    },
+    {
+        "name": "Unstoppable Fist",
+        "ability": "Dynamic Entry\nOn entry, gain 25% more damage for 3 turns.",
+        "damage": 302,
+        "hp": 603,
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/250,000"
+    },
+    {
+        "name": "Water Hashira",
+        "ability": "Water Breathing\nIncrease maximum health by 25% on entry.",
+        "damage": 34,
+        "hp": 67,
+        "rarity": "basic",
+        "drop_chance": "1/400"
+    },
+    {
+        "name": "White Dragon Emperor",
+        "ability": "Divine Divide\nReduce opponent attack by 5% every turn. If Red Dragon Emperor is in the party, this effect is increased to 15% every turn.",
+        "damage": 1030,
+        "hp": 2060,
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/5,000,000"
+    },
+    {
+        "name": "White Flame Defender",
+        "ability": "Flame Protector\nEach time this card is attacked, increase this card's damage by 15% and gain a charge. After gaining three charges, counterattack with a fireball dealing 150% of this card's damage. The charge counter then resets.\nFor every card in the party with \"Flame\" in its name, increases the amount of damage that this card gains by 10%.",
+        "damage": 2870,
+        "hp": 5730,
+        "rarity": "basic",
+        "drop_chance": "1/200,000,000"
+    },
+    {
+        "name": "White Flame Knight",
+        "ability": "Universal Heat Expansion\nAfter every attack, unleash a follow up attack which deals 75% of this card's damage and applies 2 turns of burn dealing 10% of the opponent's max HP. Opponents with more than double this card's base stats do not get hit by the follow up attack",
+        "damage": 3430,
+        "hp": 6850,
+        "rarity": "basic",
+        "drop_chance": "1/400,000,000"
+    },
+    {
+        "name": "White Ghoul",
+        "ability": "Kagune Rage\nAfter attacking, mark the field and damage opponents for 10% of their maximum health when they enter.",
+        "damage": 232,
+        "hp": 464,
+        "rarity": "basic"
+    },
+    {
+        "name": "White Panther",
+        "ability": "Empowering Blow\nWhen below 75% max health, transform into an empowered beast increasing stats by 50%",
+        "damage": 1760,
+        "hp": 3510,
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/3,500,000"
+    },
+    {
+        "name": "White Tiger",
+        "ability": "Divine Claw\nOn entry, this card slashes the enemy with the highest attack for 100% damage, and inflicts bleeding that deals 10% of this card's attack power per turn for 2 turns.",
+        "damage": 1500,
+        "hp": 3000,
+        "rarity": "basic"
+    },
+    {
+        "name": "Wild Hunter",
+        "ability": "Nen Charge\nGain a charge after every attack granting 10% more damage and health per charge (up to 3 charges).",
+        "damage": 8,
+        "hp": 16,
+        "rarity": "basic",
+        "drop_chance": "1/3"
+    },
+    {
+        "name": "Wizard King",
+        "ability": "Time Warp\nAfter every turn, this card has a 25% chance to warp time and remove the last effect that damaged it.",
+        "damage": 398,
+        "hp": 796,
+        "rarity": "basic",
+        "drop_chance": "1/1,500,000"
+    },
+	{
+		"name": "Awakened Eclipseborn Hawk",
+		"ability": "Sacrificial Pact Domain\nOn entry, create a domain with a power level equal to this card's damage that lasts for 3 turns.\nWhile active:\n- For the first active turn, all abilities from allies, enemies, and support cards are disabled.\n- All enemies have damage reduced by 10% each turn.\n- The opponent's damage reduction is converted to max health and equally divided to every living party member at the end of each turn.\nDomains can only be activated once per party, and can only activate if there is no domain currently active or if the new domain is more powerful than the previous.\nThis card's domain is cancelled on death.",
+		"damage": "8.68K",
+		"hp": "17.36K",
+		"rarity": "basic",
+		"card_type": "Boss",
+		"source_list": "World Boss",
+		"drop_chance": "1/2,250,000,000"
+	},
+    {
+        "name": "Awakened Impure Ghost",
+        "ability": "Cloned Purple Lightning\nWhile this card is alive, all cards in the party get a clone that performs an additional attack that deals 60% of this card's damage.",
+        "damage": 5050,
+        "hp": 10100,
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/1,750,000,000"
+    },
+    {
+        "name": "Awakened Shadow Monarch",
+        "ability": "Monarch's Domain\nEvery other turn, this card will block and counter enemy attacks for 75% of this card's current health as damage, and heals for 15% max health after each counter attack.\nGains a 20% stat boost for every ally with \"Shadow\" in it's name.",
+        "damage": "6.49K",
+        "hp": "12.97K",
+        "rarity": "basic",
+        "drop_chance": "1/2,000,000,000"
+    },
+    {
+        "name": "Awakened Sun Deity",
+        "ability": "Bajrang Gun\nAttacks randomly deal 75% to 400% damage. Defeating an enemy increases damage by 20% and heals for 20% maximum health.",
+        "damage": "6.31K",
+        "hp": "12.62K",
+        "rarity": "basic",
+        "drop_chance": "1/1,750,000,000"
+    },
+	{
+		"name": "Awakened Tormented Swordsman",
+		"ability": "Unrelenting Anger\nFor every 20% HP lost, this card gains +25% damage.\nOn entry, choose a stance. Every time 30% HP is lost, roll to keep or switch stances.\n- Momentum of Rage: Deals 125% damage to the current enemy. Below 75% HP, performs an additional strike for 150% damage. If the target dies while you're in this stance and below 35% HP, the next attack deals 175% damage to the next enemy at the cost of 15% HP.\n- Reckoning of Souls: At the start of each round, for every dead card on the field (ally or enemy), this card gains +5% damage but loses 5% HP. Each kill grants this card an additional +10% stats.",
+		"damage": "8.68K",
+		"hp": "17.36K",
+		"rarity": "basic",
+		"card_type": "Moon Card",
+		"source_list": "Moon Cycle Cards",
+		"drop_chance": "1/2,250,000,000"
+	},
+    {
+        "name": "Blood Valkyrie",
+        "ability": "Blood Lineage\nThis card has 2 additional forms: Deranged and Armored. On the first death, enter the Armored state and revive to 75% HP. On the second death, enter the Deranged state and revive to 35% HP. -In all forms, this card converts bleed damage into healing. \n-Armored: Take 25% less damage and attacks pierce for 25% damage onto the next card\n-Deranged: Attacks trigger a red flame that deals 50% damage and applies a bleed for 20% damage that 2 turns",
+        "damage": "5.19K",
+        "hp": "10.38K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/2,000,000,000"
+    },
+    {
+        "name": "Celestial Destroyer",
+        "ability": "Elemental Beast Bomb\nConvert 20% of burn damage taken by allies into a bomb. When an ally dies, 20% of their max HP is added to the bomb.\nWhen this card enters the field, the bomb unleashes and deals damage equal to everything absorbed.",
+        "damage": "4.51K",
+        "hp": "9.01K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/1,000,000,000"
+    },
+    {
+        "name": "Celestial Fisherman",
+        "ability": "Chakra Absorption\nOn entry, this card absorbs 25% of the health and damage of the strongest living enemy card and performs a powerful attack.\nWhen paired with the Divine Tree support card, absorption is increased to 35% of the health damage.\nNote: This card will not absorb stats beyond 200% of it's base stats.",
+        "damage": "4.16K",
+        "hp": "8.32K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/750,000,000"
+    },
+    {
+        "name": "Celestial Sovereign",
+        "ability": "Molecular Manipulation\nAttacks on this card deal 25% reduced damage. This card counterattacks every other turn with the damage that is reduced. Upon death, increase the damage of all allies with either \"Celestial\" or \"Deity\" in their name by 25% of the total reduced damage.",
+        "damage": "5.71K",
+        "hp": "11.43K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/2,750,000,000"
+    },
+    {
+        "name": "Chosen One",
+        "ability": "Vanishing Rasengan\nOn entry, this card has a 60% chance to activate Visual Jutsu, granting a 2x stat buff and a 50% chance to counterattack for 50% damage.\nOn death, have a 30% chance to revive as Celestial Destroyer with 50% of this card's max health and damage.",
+        "damage": "5.21K",
+        "hp": "10.42K",
+        "rarity": "basic",
+        "drop_chance": "1/2,500,000,000"
+    },
+    {
+        "name": "Crazy Genius",
+        "ability": "Clown Game\nOn entry, randomly gain one of the following abilities:\n- Scythe: Gain 25% damage. Heal for 20% of enemy's max HP each turn\n- Gun: Instantly deal 125% of this card's damage to the active enemy\n- Mace: Gain 2x damage, but lose 70% max HP\n- Ultimate Sacrifice: Lose 90% max HP and heal all allies by the amount of HP lost. Reduce all enemies stats by 35%",
+        "damage": "4.51K",
+        "hp": "9.01K",
+        "rarity": "basic",
+        "drop_chance": "1/1,000,000,000"
+    },
+    {
+        "name": "Deranged Elder Assassin",
+        "ability": "Dragon Dive\nRain down 5 to 25 dragon spears when this card enters the battle. Each spear deals 3.5% of this card's damage to all enemies in the enemy's party.",
+        "damage": "5.15K",
+        "hp": "10.3K",
+        "rarity": "basic",
+        "drop_chance": "1/1,500,000,000"
+    },
+    {
+        "name": "Eminence Cat",
+        "ability": "Berserker Outrage\nFor each ally that is defeated, this card gains 25% more damage. If a dead ally has \"Eminence\" in their name, the buff will increase this card's health and damage by 35% instead.",
+        "damage": "4.16K",
+        "hp": "8.32K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/750,000,000"
+    },
+    {
+        "name": "Eminence Commander",
+        "ability": "Lightning Cloak\nOn entry, attack twice at 100% and a third time at 50%. When paired with \"Lord Of Eminence\", this ability has a 50% chance to activate again in exchange for 50% of your max HP.",
+        "damage": "4.98K",
+        "hp": "9.96K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/1,500,000,000"
+    },
+    {
+        "name": "Flame Outlaw",
+        "ability": "Fire Fist\nOn entry, deal 100% damage to the target enemy and inflict a burn to all enemies for 25% of this card's damage for 2 turns.\nThis card is immune to burns, and will convert any attempted burn damage into healing (will not heal past max health).\nThis skill's entry ability can only be activated once per party, even across multiple Fire Fist users.",
+        "damage": "10.93K",
+        "hp": "21.85K",
+        "rarity": "basic"
+    },
+    {
+        "name": "Forsaken Hunter",
+        "ability": "Nen Contract\nGains a charge after every attack. Each charge grants 30% extra damage and reduces the card's HP by 15% of its max HP. Every 3 charges, deal an attack equal to the sum of this card's current HP and DMG.",
+        "damage": "6.68K",
+        "hp": "13.36K",
+        "rarity": "basic"
+    },
+    {
+        "name": "Lord of Eminence",
+        "ability": "Atomic\nOn entry, begin charging a nuclear explosion over 3 turns. For each ally that has 'Eminence' in their name, the charge time is reduced by 1 turn (minimum of 1 turn charge up). On the turn following the charge period, unleash a nuclear bomb that deals damage equal to 45% of your max HP to all enemies.",
+        "damage": "5.56K",
+        "hp": "11.11K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/2,500,000,000"
+    },
+    {
+        "name": "Mother of Creation",
+        "ability": "Dimensional Domain\nOn entry, create a domain that lasts 1 turn. While active:\n- All abilities from allies, enemies, and support cards are disabled.\n- Enemies inside take burn damage equal to 20% of this card's damage each turn.\n- If another domain is activated by a stronger card, this one is replaced.\n- The domain ends if its caster is defeated.\nThis skill can only activate once per battle, even if there are multiple cards with this skill. Only one domain skill can active at a time.",
+        "damage": "3.66K",
+        "hp": "7.32K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/500,000,000"
+    },
+    {
+        "name": "Piercing Sword Saint",
+        "ability": "11-Hit Combo\nWhen paired with Sword Saint or Integrity Knight, this card attacks 3 times every turn and counterattacks for 150% damage after being attacked. Upon death, it increases Sword Saint's stats by 150%.",
+        "damage": "2.29K",
+        "hp": "4.57K",
+        "rarity": "basic"
+    },
+    {
+        "name": "Servant of the Undead",
+        "ability": "Jujustu Combo\nAfter each attack, perform a follow-up attack dealing 75% damage, plus an additional 25% for each ally with \"undead\" or \"blood\" in their name that was defeated. If paired with Undead King, revive once on death to 75% Max HP.",
+        "damage": "3.85K",
+        "hp": "7.7K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/600,000,000"
+    },
+    {
+        "name": "Shadow Ant",
+        "ability": "Skreeeee\nOn entry, do 75% of this card's max health as damage.\nGains a one-time 50% stat buff when in a party with an Awakened Shadow Monarch.",
+        "damage": "3.92K",
+        "hp": "7.84K",
+        "rarity": "basic",
+        "drop_chance": "1/1,250,000,000"
+    },
+    {
+        "name": "Shadow Commander",
+        "ability": "Commander's Strength\nHave a 50% chance to reduce incoming damage by 40% every turn.\nGains a one-time 50% stat buff when in a party with an Awakened Shadow Monarch.",
+        "damage": "3.61K",
+        "hp": "7.22K",
+        "rarity": "basic",
+        "drop_chance": "1/600,000,000"
+    },
+    {
+        "name": "Sky King",
+        "ability": "100 Billion Volts\nIf an enemy tries to disable this card's skill, cancel the effect and blast them for 175% damage.\nWhen paired with the \"Sky Drum\" support card, each attack has a 25% chance to summon a giant lightning orb that explodes for 200% damage.\nThis card has immunity to Stuns.",
+        "damage": "4.22K",
+        "hp": "8.45K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "World Boss",
+        "drop_chance": "1/1,000,000,000"
+    },
+    {
+        "name": "Soul Queen",
+        "ability": "Soul Trap\nWhen an opponent enters the field they get frozen for 1 turn, burned for 10% maximum health for 3 turns, and have their health and damage reduced by 10%.",
+        "damage": "3.66K",
+        "hp": "7.32K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/1,000,000,000"
+    },
+    {
+        "name": "Undead Commander",
+        "ability": "Enamored Loyalty\nAfter each enemy attack, counterattack with 115% of this card's damage.\nAfter being defeated the first time, this card transforms, revives to full health, and will take 20% reduced damage.\nFor each ally with \"Undead\" in its name that was defeated, this card gains a 25% HP and Damage boost.",
+        "damage": "4.82K",
+        "hp": "9.64K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/1,250,000,000"
+    },
+    {
+        "name": "Undead Demon",
+        "ability": "Demon Meteor\nThis card is immune to burn damage. On entry, rain down a meteor on the enemy card, dealing 150% of this card's base damage. This card also stores 50% of all burn damage taken by allies and adds it to the meteor's damage.",
+        "damage": "4.28K",
+        "hp": "8.55K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/800,000,000"
+    },
+    {
+        "name": "Undead King",
+        "ability": "Overlord\nWhile alive and in the last position of the party, this card has a 35% chance each turn to cancel the damage an ally takes and heals 20% of their max HP (Activates a maximum of 6 times per battle).\nOn entry, nuke the opponent's party for 80% of the damage that this card has healed throughout the fight.",
+        "damage": "5.85K",
+        "hp": "11.7K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "Boss Cards",
+        "drop_chance": "1/3,000,000,000"
+    },
+    {
+        "name": "White Flame Pillar",
+        "ability": "Smite Pillar\nAfter each attack, release an aura that causes the enemy card to attack their next teammate for 30% of their damage",
+        "damage": "4.16K",
+        "hp": "8.32K",
+        "rarity": "basic",
+        "drop_chance": "1/750,000,000"
+    },
+    {
+        "name": "Zen Master",
+        "ability": "Path of Enlightenment\nEvery attack has a 45% chance to trigger a follow-up attack dealing 75% of this card's damage. After 2 successful follow-up attacks on the same target, deal 225% of this card's current damage to the next enemy in the opponent's party upon entry.",
+        "damage": "4.82K",
+        "hp": "9.64K",
+        "rarity": "basic",
+        "drop_chance": "1/1,250,000,000"
+    }
+]
