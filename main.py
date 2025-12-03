@@ -14,7 +14,7 @@ def parse_stat(value_str):
     elif "M" in cleaned_val:
 
         number_part = cleaned_val.replace("M", "")
-        return int(float(number_part)* 10000)
+        return int(float(number_part)* 1000000)
     
     else:
 
@@ -29,7 +29,6 @@ def get_card_data (card_name, full_database):
             return card
 
     return None
-    
 
 class Card:
     def __init__(self,data):
@@ -41,15 +40,99 @@ class Card:
 
         
         self.dodge_chance = 0
+        
+        self.shield_activated = False
 
         if self.card_name == "Bijuu Beast":
             self.dodge_chance = 60
+
+        elif self.card_name == "Armored Giant":
+            self.shield_active = True
+
+    def perform_attack(self, target):
+        if self.card_name == "Bald Hero":
+            self._ability_Bald(target)
+        elif self.card_name == "Awakened Galactic Tyrant":
+            self._ability_galactic_tyrant(target)
+        elif self.card_name == "Beast Giant":
+            self._ability_Beast_Giant(target)
+        else:
+            print (f"{self.card_name} damaged")
+            target.take_damage(self.damage)
+
+    def _ability_Bald(self, target):
+        roll = random.randint(1,20)
+        if roll == 20:
+            target.take_damage(99999999)
+        else:
+            target.take_damage(self.damage)
+
+    def _ability_Beast_Giant(self, target):
+        rock = random.randint(4,10)
+        rock_damage = int(self.damage * 20)
+        
+        total_damage = rock_damage * rock
+
+        target.takedamage(total_damage)    
+
+    def _ability_galactic_tyrant(self, target):
+        damage_amount = int(target.max_hp * .20)
+        target.take_damage(damage_amount)
+        target.current_hp - self.damage
+
+        heal_amount = int(self.max_hp * 0.10)
+        self.current_hp += heal_amount
+
+    def try_to_defend(self, incoming_damage):
+
+        if self.card_name == "Bijuu Beast":
+            roll = random.randint(1,100)
+            if roll <= self.dodge_chance:
+                print ("Dodge")
+                self.dodge_chance -= 16
+                return 0
+        elif self.card_name == "Armored Giant":
+            if self.shield_activated:
+                print ("Shield Blocked")
+                self.shield_active = False
+                return 0
+            
+        return incoming_damage
+    
+    def take_damage(self, amount):
+        final_damage = self.try_to_defend(amount)
+        self.current_hp -= final_damage
 
     def is_alive(self):
         return self.current_hp >  0
 
     def take_damage(self, amount):
         self.current_hp -= amount
+
+    def activate_ability(self, target):
+
+        if self.card_name == "Bijuu Beast":
+            self.dodge_chance = 60
+            dodgechance = random.randint(1,100)
+            if dodgechance <= self.dodge_chance:
+                self.dodge_chance -= 16
+                print("Dodge successful")
+            else:
+                pass
+
+        elif self.card_name == "Bald Hero":
+            self._ability_Bald(target)
+        elif self.card_name == "Armored Giant":
+            self._ability_Armored_giant(self)
+
+
+        elif self.card_name == "Awakened Galactic Tyrant":
+            self._ability_galactic_tyrant(target)
+            
+        elif self.card_name == "Beast Giant":
+
+            self._ability_Beast_Giant(target)
+    
 
 class BattleSimulation:
     def __init__(self, card_data_list):
@@ -66,50 +149,3 @@ if __name__ == "__main__":
         raw_data = json.load(f)
 
 
-    baldhero = get_card_data("Bald Hero",raw_data)
-    bijuu = get_card_data("Bijuu Beast", raw_data)
-
-    card_a = Card(baldhero)
-    card_b = Card(bijuu)
-
-    print(f"Battle Start: {card_a.card_name} vs {card_b.card_name}")
-    print(f"{card_a.card_name} HP: {card_a.current_hp}")
-    print(f"{card_b.card_name} HP: {card_b.current_hp}")
-    print(f"{card_b.card_name} Dodge: {card_b.dodge_chance}%")
-
-    turn_count = 0
-
-    while card_a.is_alive() and card_b.is_alive():
-        turn_count += 1
-        print (f"turn count is {turn_count}")
-
-        dodge_roll = random.randint(1,100)
-
-        if dodge_roll <= card_b.dodge_chance:
-            print("Bijuu dodged")
-            card_b.dodge_chance -= 16
-            if card_b.dodge_chance < 0:
-                card_b.dodge_chance = 0
-            print (f"dodge chance is {card_b.dodge_chance}")
-
-        else:
-            instakill = random.randint(1, 20)
-            print (f"instakill roll is {instakill}")
-
-            if instakill == 1:
-                card_b.take_damage(999999999999)
-            else:
-                print (f"Bald hero does {card_a.damage} to {card_b.card_name}")
-                card_b.take_damage(card_a.damage)
-
-            if not card_b.is_alive():
-                print ("Bijuu beast died")
-                break
-
-        
-        print (f"Bijuu does {card_b.damage}")
-        card_a.take_damage(card_b.damage)
-
-        if not card_a.is_alive():
-            print ("Bald hero lost")
-            break
