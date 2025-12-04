@@ -59,16 +59,16 @@
         "source_list": "Boss Cards",
         "drop_chance": "1/10,000,000"
     },
-	{
-		"name": "Ancient King of Curses",
-		"ability": "Malevolent Shrine Domain\nThis card has a 35% chance to cancel the enemy attack and counter attack with 5 slashes each doing 10% of this card's maximum health.\nIf this card successfully blocks two consecutive attacks, create a domain with a power level equal to this card's damage that lasts for 3 turns.\nWhile active, all enemies inside the domain are dealt 25% of this card's damage each turn.\nDomains can only be activated once per party, and can only activate if there is no domain currently active or if the new domain is more powerful than the previous.\nThis card's domain is cancelled on death.",
-		"damage": "7.31K",
-		"hp": "14.62K",
-		"rarity": "basic",
-		"card_type": "Boss",
-		"source_list": "World Boss",
-		"drop_chance": "1/2,250,000,000"
-	},
+    {
+        "name": "Ancient King of Curses",
+        "ability": "Malevolent Shrine Domain\nThis card has a 35% chance to cancel the enemy attack and counter attack with 5 slashes each doing 10% of this card's maximum health.\nIf this card successfully blocks two consecutive attacks, create a domain with a power level equal to this card's damage that lasts for 3 turns.\nWhile active, all enemies inside the domain are dealt 25% of this card's damage each turn.\nDomains can only be activated once per party, and can only activate if there is no domain currently active or if the new domain is more powerful than the previous.\nThis card's domain is cancelled on death.",
+        "damage": "7.31K",
+        "hp": "14.62K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "World Boss",
+        "drop_chance": "1/2,250,000,000"
+    },
     {
         "name": "Awakened King of Curses",
         "ability": "Flamebloom Arrow\nEvery other turn, fire an arrow that pierces all enemies for 15% damage. Enemies hit suffer from a burn that deals 10% damage for 2 turns.\nWhen played last, when an off field ally card takes any damage, cancel it and counterattack the enemy for 125% damage.\nIf paired with Divine General have a 50% chance each turn to clear away any stuns, burns, freezes or bleeds.",
@@ -594,16 +594,16 @@
         "source_list": "Moon Cycle Cards",
         "drop_chance": "1/250,000,000"
     },
-	{
-    "name": "Divine General",
-    "ability": "Cursed Metamorphosis\nAfter each turn, gain 10% damage reduction and +7.5% stats (max 3). This card adapts up to 5 times per battle:\n- Heavy Damage: If hit for less than 50% HP, gain +25% max HP and heal 25%.\n- Light Damage: If hit for more than 50% HP, gain +30% damage; next attack deals 120%.\n- Status Effects: One turn after receiving a stun/freeze/burn, gain permanent immunity to that status effect. Repeated attempts grant +15% stats.\nThis Skill is limited to being used by one member per party",
-    "damage": "5.63K",
-    "hp": "11.26K",
-    "rarity": "basic",
-    "card_type": "Boss",
-    "source_list": "World Boss",
-    "drop_chance": "1/1,000,000,000"
-},
+    {
+        "name": "Divine General",
+        "ability": "Cursed Metamorphosis\nAfter each turn, gain 10% damage reduction and +7.5% stats (max 3). This card adapts up to 5 times per battle:\n- Heavy Damage: If hit for less than 50% HP, gain +25% max HP and heal 25%.\n- Light Damage: If hit for more than 50% HP, gain +30% damage; next attack deals 120%.\n- Status Effects: One turn after receiving a stun/freeze/burn, gain permanent immunity to that status effect. Repeated attempts grant +15% stats.\nThis Skill is limited to being used by one member per party",
+        "damage": "5.63K",
+        "hp": "11.26K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "World Boss",
+        "drop_chance": "1/1,000,000,000"
+    },
     {
         "name": "Divine Guide",
         "ability": "Heavenly Blessing\nBoosts all allies maximum health by 15% on battle start.",
@@ -630,16 +630,16 @@
         "rarity": "basic",
         "drop_chance": "1/500,000"
     },
-	{
-		"name": "Eclipseborn Hawk",
-		"ability": "Abandoned Humanity\nUpon this card's first death, sacrifice 50% of your next card's HP and revive, using that card's stats combined with your original stats (up to a maximum of 350% of your base stats).\nWhen this card's HP falls below 40%, it has a 60% chance each turn to perform a follow-up attack that deals 125% damage.",
-		"damage": "8.48K",
-		"hp": "16.96K",
-		"rarity": "basic",
-		"card_type": "Moon Card",
-		"source_list": "Moon Cycle Cards",
-		"drop_chance": "1/300,000,000"
-	},
+    {
+        "name": "Eclipseborn Hawk",
+        "ability": "Abandoned Humanity\nUpon this card's first death, sacrifice 50% of your next card's HP and revive, using that card's stats combined with your original stats (up to a maximum of 350% of your base stats).\nWhen this card's HP falls below 40%, it has a 60% chance each turn to perform a follow-up attack that deals 125% damage.",
+        "damage": "8.48K",
+        "hp": "16.96K",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/300,000,000"
+    },
     {
         "name": "Elder Combat Giant",
         "ability": "Liberated Leader\nWhen paired with \"Combat Giant\", this card can foresee the future, dodging the first 2 attacks from every enemy it faces. Each time it dodges, 10% of the avoided damage is converted into a damage buff for any ally card with \"Giant\" in its name.",
@@ -842,16 +842,16 @@
         "hp": "12.97K",
         "rarity": "basic"
     },
-	{
-		"name": "Forsaken Knight",
-		"ability": "Severing Fate\nOn entry, immediately attack for 175% damage.\nEvery other turn, this card attacks twice with the second attack dealing 125% damage. Afterwards, buff this card's damage by 20% and heal for 10% of the damage dealt that turn.",
-		"damage": "9.52K",
-		"hp": "19.03K",
-		"rarity": "basic",
-		"card_type": "Moon Card",
-		"source_list": "Moon Cycle Cards",
-		"drop_chance": "1/425,000,000"
-	},
+    {
+        "name": "Forsaken Knight",
+        "ability": "Severing Fate\nOn entry, immediately attack for 175% damage.\nEvery other turn, this card attacks twice with the second attack dealing 125% damage. Afterwards, buff this card's damage by 20% and heal for 10% of the damage dealt that turn.",
+        "damage": "9.52K",
+        "hp": "19.03K",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/425,000,000"
+    },
     {
         "name": "Frost Demon",
         "ability": "Ice Bloom\nAfter the first successful attack, plant a seed which grows after 1 turn and freezes the opponent for 2 turns.",
@@ -925,16 +925,16 @@
         "rarity": "basic",
         "drop_chance": "1/850,000"
     },
-	{
-		"name": "Herald of Fate",
-		"ability": "Inevitable Destiny\nWhile alive, this card follows up after every ally's attack, dealing 30% damage and has a 60% chance to brand the enemy for 2 turns.\n- Branded enemies have a 40% chance for their attacks to be reflected back, dealing 40% of their own damage.\n- If an enemy dies while branded, this card absorbs 30% of their stats (Limited to 300% of base stats).\n- Enemies cannot be affected by more than one brand at a time.\n- When paired with Eclipseborn Hawk or Awakened Eclipseborn Hawk, this card has a 45% chance to save an ally from death, restoring them to 75% HP and granting a 1-turn shield. (each card can only be revived once)",
-		"damage": "10.09K",
-		"hp": "20.18K",
-		"rarity": "basic",
-		"card_type": "Moon Card",
-		"source_list": "Moon Cycle Cards",
-		"drop_chance": "1/550,000,000"
-	},
+    {
+        "name": "Herald of Fate",
+        "ability": "Inevitable Destiny\nWhile alive, this card follows up after every ally's attack, dealing 30% damage and has a 60% chance to brand the enemy for 2 turns.\n- Branded enemies have a 40% chance for their attacks to be reflected back, dealing 40% of their own damage.\n- If an enemy dies while branded, this card absorbs 30% of their stats (Limited to 300% of base stats).\n- Enemies cannot be affected by more than one brand at a time.\n- When paired with Eclipseborn Hawk or Awakened Eclipseborn Hawk, this card has a 45% chance to save an ally from death, restoring them to 75% HP and granting a 1-turn shield. (each card can only be revived once)",
+        "damage": "10.09K",
+        "hp": "20.18K",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/550,000,000"
+    },
     {
         "name": "Homeroom Teacher",
         "ability": "Failed Test\nEnter rage mode and gain 20% more attack and health on entry.",
@@ -1629,16 +1629,16 @@
         "rarity": "basic",
         "drop_chance": "1/200,000"
     },
-	{
-		"name": "Tormented Swordsman",
-		"ability": "Defying Will\nOn entry, if any ally is dead, this card gains a 40% stat buff.\nFor every 30% HP lost, this card gains an additional attack. (Max 3)\nThis card will survive the first fatal attack with 1 HP.\nThis skill is limited to being used by one member per party.",
-		"damage": "7.71K",
-		"hp": "15.41K",
-		"rarity": "basic",
-		"card_type": "Moon Card",
-		"source_list": "Moon Cycle Cards",
-		"drop_chance": "1/200,000,000"
-	},
+    {
+        "name": "Tormented Swordsman",
+        "ability": "Defying Will\nOn entry, if any ally is dead, this card gains a 40% stat buff.\nFor every 30% HP lost, this card gains an additional attack. (Max 3)\nThis card will survive the first fatal attack with 1 HP.\nThis skill is limited to being used by one member per party.",
+        "damage": "7.71K",
+        "hp": "15.41K",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/200,000,000"
+    },
     {
         "name": "Ultimate Warrior",
         "ability": "Masenko Blast\nDeals double damage to cards stronger than this card.",
@@ -1743,16 +1743,16 @@
         "rarity": "basic",
         "drop_chance": "1/1,500,000"
     },
-	{
-		"name": "Awakened Eclipseborn Hawk",
-		"ability": "Sacrificial Pact Domain\nOn entry, create a domain with a power level equal to this card's damage that lasts for 3 turns.\nWhile active:\n- For the first active turn, all abilities from allies, enemies, and support cards are disabled.\n- All enemies have damage reduced by 10% each turn.\n- The opponent's damage reduction is converted to max health and equally divided to every living party member at the end of each turn.\nDomains can only be activated once per party, and can only activate if there is no domain currently active or if the new domain is more powerful than the previous.\nThis card's domain is cancelled on death.",
-		"damage": "8.68K",
-		"hp": "17.36K",
-		"rarity": "basic",
-		"card_type": "Boss",
-		"source_list": "World Boss",
-		"drop_chance": "1/2,250,000,000"
-	},
+    {
+        "name": "Awakened Eclipseborn Hawk",
+        "ability": "Sacrificial Pact Domain\nOn entry, create a domain with a power level equal to this card's damage that lasts for 3 turns.\nWhile active:\n- For the first active turn, all abilities from allies, enemies, and support cards are disabled.\n- All enemies have damage reduced by 10% each turn.\n- The opponent's damage reduction is converted to max health and equally divided to every living party member at the end of each turn.\nDomains can only be activated once per party, and can only activate if there is no domain currently active or if the new domain is more powerful than the previous.\nThis card's domain is cancelled on death.",
+        "damage": "8.68K",
+        "hp": "17.36K",
+        "rarity": "basic",
+        "card_type": "Boss",
+        "source_list": "World Boss",
+        "drop_chance": "1/2,250,000,000"
+    },
     {
         "name": "Awakened Impure Ghost",
         "ability": "Cloned Purple Lightning\nWhile this card is alive, all cards in the party get a clone that performs an additional attack that deals 60% of this card's damage.",
@@ -1779,16 +1779,16 @@
         "rarity": "basic",
         "drop_chance": "1/1,750,000,000"
     },
-	{
-		"name": "Awakened Tormented Swordsman",
-		"ability": "Unrelenting Anger\nFor every 20% HP lost, this card gains +25% damage.\nOn entry, choose a stance. Every time 30% HP is lost, roll to keep or switch stances.\n- Momentum of Rage: Deals 125% damage to the current enemy. Below 75% HP, performs an additional strike for 150% damage. If the target dies while you're in this stance and below 35% HP, the next attack deals 175% damage to the next enemy at the cost of 15% HP.\n- Reckoning of Souls: At the start of each round, for every dead card on the field (ally or enemy), this card gains +5% damage but loses 5% HP. Each kill grants this card an additional +10% stats.",
-		"damage": "8.68K",
-		"hp": "17.36K",
-		"rarity": "basic",
-		"card_type": "Moon Card",
-		"source_list": "Moon Cycle Cards",
-		"drop_chance": "1/2,250,000,000"
-	},
+    {
+        "name": "Awakened Tormented Swordsman",
+        "ability": "Unrelenting Anger\nFor every 20% HP lost, this card gains +25% damage.\nOn entry, choose a stance. Every time 30% HP is lost, roll to keep or switch stances.\n- Momentum of Rage: Deals 125% damage to the current enemy. Below 75% HP, performs an additional strike for 150% damage. If the target dies while you're in this stance and below 35% HP, the next attack deals 175% damage to the next enemy at the cost of 15% HP.\n- Reckoning of Souls: At the start of each round, for every dead card on the field (ally or enemy), this card gains +5% damage but loses 5% HP. Each kill grants this card an additional +10% stats.",
+        "damage": "8.68K",
+        "hp": "17.36K",
+        "rarity": "basic",
+        "card_type": "Moon Card",
+        "source_list": "Moon Cycle Cards",
+        "drop_chance": "1/2,250,000,000"
+    },
     {
         "name": "Blood Valkyrie",
         "ability": "Blood Lineage\nThis card has 2 additional forms: Deranged and Armored. On the first death, enter the Armored state and revive to 75% HP. On the second death, enter the Deranged state and revive to 35% HP. -In all forms, this card converts bleed damage into healing. \n-Armored: Take 25% less damage and attacks pierce for 25% damage onto the next card\n-Deranged: Attacks trigger a red flame that deals 50% damage and applies a bleed for 20% damage that 2 turns",
