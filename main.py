@@ -1,0 +1,159 @@
+import os
+import json
+import random
+import time
+import ability
+
+def parse_stat(value_str):
+    cleaned_val = str(value_str).upper()
+
+    cleaned_val = cleaned_val.replace(",", "")
+
+    if "K" in cleaned_val:
+
+        number_part = cleaned_val.replace("K", "")
+        return int(float(number_part)* 1000) 
+    elif "M" in cleaned_val:
+
+        number_part = cleaned_val.replace("M", "")
+        return int(float(number_part)* 1000000)
+    
+    else:
+
+        return int(float(cleaned_val))
+    
+def get_card_data (card_name, full_database):
+
+    for card in full_database:
+
+        if card["name"] == card_name:
+
+            return card
+
+    return None
+
+class Card:
+    def __init__(self,data):
+        self.max_hp = parse_stat(data['hp'])
+        self.current_hp = self.max_hp
+        self.damage = parse_stat(data['damage'])
+        self.card_name = data['name']
+        self.ability_desc = data['ability']
+        self.has_revive = False
+
+        
+        self.dodge_chance = 0
+
+        if self.card_name == "Blade Captain":
+            self.dodge_chance = 35
+        
+        if self.card_name == "Bijuu Beast":
+            self.dodge_chance = 60
+
+        elif self.card_name == "Armored Giant":
+            self.shield_active = True
+
+    def perform_attack(self, target):
+        if self.card_name == "Bald Hero":
+            ability.activate_Bald(self, target)
+        elif self.card_name == "Awakened Galactic Tyrant":
+            ability.activate_galactic_tyrant(self, target)
+        elif self.card_name == "Beast Giant":
+            ability.activate_Beast_Giant(self, target)
+        else:
+            print (f"{self.card_name} damaged")
+            target.take_damage(self.damage)
+
+
+    def try_to_defend(self, incoming_damage):
+
+        if self.card_name == "Bijuu Beast":
+            roll = random.randint(1,100)
+            if roll <= self.dodge_chance:
+                print ("Dodge")
+                self.dodge_chance -= 16
+                return 0
+            
+        elif self.card_name == "Armored Giant":
+            if self.shield_activated:
+                print ("Shield Blocked")
+                self.shield_active = False
+                return 0
+            
+        elif self.card_name == "Blade Captain":
+            roll1 = random.randint(1,100)
+            if roll1 <= self.dodge_chance:
+                print ("Dodge")
+                return 0
+            
+        return incoming_damage
+    
+    def take_damage(self, amount):
+        final_damage = self.try_to_defend(amount)
+        self.current_hp -= final_damage
+
+    def is_alive(self):
+        return self.current_hp >  0
+
+    def check_revival(self):
+        if self.card_name == "Berserker Shinigami":
+            if self.current_hp <= 0:
+                self.has_revive = True
+                self.current_hp = (self.max_hp *.5)
+                self.damage = (self.damage * 1.5)
+                return True
+        return False
+
+class BattleSimulation:
+    def __init__(self):
+        self.turn_count = 0
+
+    def run_1x1 (self, card_a, card_b):
+        print ("="*50)
+        print (f"Battle started between {card_a} and {card_b}")
+        print ("="*50)
+
+
+        self.turn_count = 0
+
+        while card_a.is_alive() and card_b.is_alive():
+
+            self.turn_count += 1
+            print (f"turn {self.turn_count}")
+
+            card_a.perform_attack(card_b)
+
+            if not card_b.is_alive():
+                if card_b.check_revival():
+                    pass
+                else:
+                    print (f"{card_a.card_name} wins")
+                    break
+            card_b.perform_attack(card_a)
+
+            if not card_a.is_alive():
+                if card_a.check_revival():
+                    pass
+                else:
+                    print (f"{card_b.card_name} wins")
+                    break
+
+        
+        print (f"Battle has eneded in {self.turn_count}")
+
+
+if __name__ == "__main__":
+
+    with open(r"card_database.json") as f:
+        raw_data = json.load(f)
+
+    #data_a = random.choice(raw_data)
+    #data_b = random.choice(raw_data)
+
+    data_a = get_card_data("Bijuu Beast", raw_data)
+    data_b = get_card_data("Berserker Shinigami", raw_data)
+    player_1 = Card(data_a)
+    player_2 = Card(data_b)
+
+    sim = BattleSimulation()
+    sim.run_1x1(player_1,player_2)
