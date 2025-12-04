@@ -78,3 +78,40 @@ def activate_a_pale_demon(attacker, target):
         damage_per_hit = int(attacker.damage * 0.5)
         total_damage = damage_per_hit * strikes
         target.take_damage(total_damage)
+
+
+def activate_soul_king (attacker, target):
+    statsteal = random.randint(15, 40)
+    target.take_damage(attacker.damage)
+    if target.current_hp <= 0:
+        hp_gain = float((target.max_hp * statsteal) / 100)
+        damage_gain = float((target.damage * statsteal) / 100)
+        attacker.current_hp += hp_gain
+        attacker.damage += damage_gain
+
+def activate_esper_prodigy(attacker, target):
+    missing_hp = attacker.max_hp - attacker.current_hp
+    bonus_damage = int(missing_hp * 1.0) 
+    total_damage = attacker.damage + bonus_damage
+    target.take_damage(total_damage)
+
+def activate_flame_head_captain(attacker, target):
+    if attacker.flame_stacks < 3:
+        attacker.flame_stacks += 1
+        attacker.max_hp = int(attacker.max_hp * 1.3)
+        attacker.current_hp = int(attacker.current_hp * 1.3)
+        attacker.damage = int(attacker.damage * 1.3)
+    
+    target.take_damage(attacker.damage)
+    
+    if attacker.flame_stacks >= 3:
+        if attacker.burn_target != target:
+            attacker.burn_target = target
+            attacker.burn_turns_remaining = 2
+        
+        if attacker.burn_turns_remaining > 0:
+            burn_damage = int(attacker.damage * 0.4)
+            target.take_damage(burn_damage)
+            attacker.burn_turns_remaining -= 1
+    
+    

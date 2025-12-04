@@ -40,7 +40,6 @@ class Card:
         self.card_name = data['name']
         self.ability_desc = data['ability']
         self.has_revive = False
-
         
         self.dodge_chance = 0
         self.attack_count = 0
@@ -53,8 +52,21 @@ class Card:
 
         elif self.card_name == "Armored Giant":
             self.shield_active = True
+        
+        if self.card_name == "Science King":
+            roll = random.randint(1, 2)
+            if roll == 1:
+                self.max_hp = int(self.max_hp * 1.15)
+                self.current_hp = self.max_hp
+            else:
+                self.damage = int(self.damage * 1.15)
+        
+        if self.card_name == "Flame Head Captain":
+            self.flame_stacks = 0
+            self.burn_target = None
+            self.burn_turns_remaining = 0
 
-    def perform_attack(self, target):
+    def perform_attack(self, target): #ability activat
         if self.card_name == "Bald Hero":
             ability.activate_Bald(self, target)
         elif self.card_name == "Awakened Galactic Tyrant":
@@ -75,12 +87,18 @@ class Card:
             ability.activate_blue_slime(self, target)
         elif self.card_name == "Awakened Pale Demon Lord":
             ability.activate_a_pale_demon(self, target)
+        elif self.card_name == "Soul King":
+            ability.activate_soul_king (self, target)
+        elif self.card_name == "Esper Prodigy":
+            ability.activate_esper_prodigy(self, target)
+        elif self.card_name == "Flame Head Captain":
+            ability.activate_flame_head_captain(self, target)
         else:
             print (f"{self.card_name} damaged")
             target.take_damage(self.damage)
 
 
-    def try_to_defend(self, incoming_damage):
+    def try_to_defend(self, incoming_damage): #defense logic section
 
         if self.card_name == "Bijuu Beast":
             roll = random.randint(1,100)
@@ -100,7 +118,14 @@ class Card:
             if roll1 <= self.dodge_chance:
                 print ("Dodge")
                 return 0
+        
+        if self.card_name == "Shadow Monarch":
+            incoming_damage = int(incoming_damage * 1.1)
             
+        if self.card_name == "Flame Head Captain":
+            if self.flame_stacks >= 3:
+                incoming_damage = int(incoming_damage * 0.65)
+
         return incoming_damage
     
     def take_damage(self, amount):
