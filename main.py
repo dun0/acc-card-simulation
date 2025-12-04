@@ -43,6 +43,7 @@ class Card:
 
         
         self.dodge_chance = 0
+        self.attack_count = 0
 
         if self.card_name == "Blade Captain":
             self.dodge_chance = 35
@@ -60,6 +61,20 @@ class Card:
             ability.activate_galactic_tyrant(self, target)
         elif self.card_name == "Beast Giant":
             ability.activate_Beast_Giant(self, target)
+        elif self.card_name == "Awakened Prideful Prince":
+            ability.activate_a_prideful_prince(self, target)
+        elif self.card_name == "Blade Captain":
+            ability.activate_blade_captain(self, target)
+        elif self.card_name == "Body Switcher":
+            ability.activate_body_switcher(self, target)
+        elif self.card_name == "Deranged Assassin":
+            ability.activate_Deranged_assassin (self, target)
+        elif self.card_name == "Death Log":
+            ability.activate_death_log(self, target)
+        elif self.card_name == "Blue Slime":
+            ability.activate_blue_slime(self, target)
+        elif self.card_name == "Awakened Pale Demon Lord":
+            ability.activate_a_pale_demon(self, target)
         else:
             print (f"{self.card_name} damaged")
             target.take_damage(self.damage)
@@ -96,12 +111,33 @@ class Card:
         return self.current_hp >  0
 
     def check_revival(self):
-        if self.card_name == "Berserker Shinigami":
+        if self.card_name == "Berserker Shinigami" and not self.has_revive:
             if self.current_hp <= 0:
                 self.has_revive = True
-                self.current_hp = (self.max_hp *.5)
-                self.damage = (self.damage * 1.5)
+                self.current_hp = int(self.max_hp * 0.5)
+                self.damage = int(self.damage * 1.5)
                 return True
+
+        if self.card_name == "Combat Giant" and not self.has_revive:
+            if self.current_hp <= 0:
+                self.has_revive = True
+                self.current_hp = int(self.max_hp * 2.5)
+                self.damage = int(self.damage * 1.35)
+                return True
+        if self.card_name == "Awakened Pale Demon Lord" and not self.has_revive:
+            if self.current_hp <= 0:
+                self.has_revive = True
+                self.max_hp = int(self.max_hp * 1.25)
+                self.current_hp = self.max_hp
+                return True
+        if self.card_name == "Crimson Vampire" and not self.has_revive:
+            if self.current_hp <= 0:
+                roll = random.randint(1, 2)
+                if roll == 1:
+                    self.has_revive = True
+                    self.current_hp = self.max_hp
+                    return True
+
         return False
 
 class BattleSimulation:
@@ -150,8 +186,8 @@ if __name__ == "__main__":
     #data_a = random.choice(raw_data)
     #data_b = random.choice(raw_data)
 
-    data_a = get_card_data("Bijuu Beast", raw_data)
-    data_b = get_card_data("Berserker Shinigami", raw_data)
+    data_a = get_card_data("Zen Master", raw_data)
+    data_b = get_card_data("Blue Slime", raw_data)
     player_1 = Card(data_a)
     player_2 = Card(data_b)
 
