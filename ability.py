@@ -27,16 +27,14 @@ def activate_galactic_tyrant(attacker, target):
     if attacker.current_hp > attacker.max_hp:
         attacker.current_hp = attacker.max_hp
 
-def activated_a_prideful_prince(attacker, target):
+def activate_a_prideful_prince(attacker, target):
 
     damage_amount = int(target.max_hp * .20)
-
     target.take_damage(damage_amount)
-
     target.take_damage(attacker.damage)
 
 
-def blade_captain(attacker, target):
+def activate_blade_captain(attacker, target):
     roll = random.randint(1,100)
     if roll <= 35:
         dodge_damage = int(attacker.damage * 1.5)
@@ -44,9 +42,39 @@ def blade_captain(attacker, target):
     else:
         target.take_damage(attacker.damage)
 
-def body_switcher(attacker, target):
+def activate_body_switcher(attacker, target):
     stolen_damage = (target.damage * .15)
     stolen_hp = (target.max_hp * .15)
     attacker.max_hp = (attacker.max_hp + stolen_hp)
     attacker.damage = (attacker.damage + stolen_damage)
     target.take_damage (attacker.damage)
+
+def activate_Deranged_assassin (attacker, target):
+    target.take_damage(attacker.damage)
+    target.take_damage(attacker.damage)
+    selfdamage = int(attacker.current_hp * 0.2)
+    attacker.current_hp = (attacker.current_hp - selfdamage)
+
+def activate_death_log(attacker, target):
+    attacker.attack_count += 1
+    target.take_damage(attacker.damage)
+    
+    if attacker.attack_count >= 5:
+        target.take_damage(9999999999)
+
+def activate_blue_slime(attacker, target):
+    heal_amount = int(attacker.damage * 0.40)
+    target.take_damage(attacker.damage)
+    attacker.current_hp += heal_amount
+
+    if attacker.current_hp > attacker.max_hp:
+        attacker.current_hp = attacker.max_hp
+
+def activate_a_pale_demon(attacker, target):
+    if not attacker.has_revive:
+        target.take_damage(attacker.damage)
+    else:
+        strikes = random.randint(2, 5)
+        damage_per_hit = int(attacker.damage * 0.5)
+        total_damage = damage_per_hit * strikes
+        target.take_damage(total_damage)
