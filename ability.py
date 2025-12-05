@@ -113,5 +113,109 @@ def activate_flame_head_captain(attacker, target):
             burn_damage = int(attacker.damage * 0.4)
             target.take_damage(burn_damage)
             attacker.burn_turns_remaining -= 1
+
+def activate_zen_masta(attacker, target):
+    if attacker.zen_target != target:
+        attacker.zen_target = target
+        attacker.zenstack = 0
     
+    roll = random.randint(1, 100)
+    
+    target.take_damage(attacker.damage)
+    
+    if roll <= 45:
+        follow_up_damage = int(attacker.damage * 0.75)
+        target.take_damage(follow_up_damage)
+        attacker.zenstack += 1
+
+        if attacker.zenstack >= 2:
+            bonus_damage = int(attacker.damage * 2.25)
+            target.take_damage(bonus_damage)
+            attacker.zenstack = 0 
+            # TODO: Apply 225% damage to next enemy
+
+def activate_bijuu_beast (attacker, target):
+    target.take_damage(attacker.damage)
+
+def activate_black_swordsman(attacker, target):
+    target.take_damage(attacker.damage)
+    remaining_hp = int(target.current_hp * 0.2)
+    target.take_damage(remaining_hp)
+
+def activate_awakened_wildhunter (attacker, target):
+    if attacker.wild_attacks % 2 == 0:
+
+        rockfist = int(attacker.damage* 1.5)
+        target.take_damage(rockfist)
+
+    else:
+
+        target.take_damage(attacker.damage)
+
+    attacker.wild_attacks += 1
+
+
+def activate_destroyer_deity (attacker, target):
+    percenthp = int(target.max_hp * 0.15)
+    target.take_damage(attacker.damage)
+    if target.current_hp <= percenthp:
+        target.take_damage(9999999)
+
+def activate_bamboo_demon (attacker, target):
+    target.take_damage (attacker.damage)
+    attacker.bamboo_stack += 1
+
+    if attacker.bamboo_stack >= 2:
+        explosiondamage = int(target.max_hp * 0.2)
+        target.take_damage (explosiondamage)
+        attacker.bamboo_stack = 0
+
+def activate_blade_rebel (attacker, target):
+    target.take_damage (attacker.damage)
+    target.damage = int(target.damage * 0.9)
+
+def activate_dark_avenger(attacker, target):
+    target.take_damage(attacker.damage)
+
+    if attacker.burn_turns_remaining == 0:
+        attacker.burn_turns_remaining = 2
+        attacker.burn_target = target
+        burn_damage = int(target.max_hp * 0.1)
+        target.take_damage(burn_damage)
+        attacker.burn_turns_remaining -= 1
+
+    
+def activate_awakened_shadow_sum (attacker, target):
+    target.take_damage (attacker.damage)
+    target.take_damage( int(attacker.damage * 0.35))
+
+def activate_fire_dragon (attacker, target):
+    roll = random.randint (1,100)
+
+    target.take_damage(attacker.damage)
+    if roll <= 10 and attacker.burn_turns_remaining == 0:
+        attacker.burn_turns_remaining = 2
+        attacker.burn_target = target
+
+def activate_crimson_eyes (attacker, target):
+    target.take_damage(attacker.damage)
+    if not hasattr(attacker, 'crimson_used'):
+        target.stun_turns = 1
+        attacker.crimson_used = True
+
+def activate_blood_fiend(attacker, target):
+    roll = random.randint(1,100)
+    if roll <= 50:
+        target.take_damage(int(attacker.damage * 1.3))
+        percentlost = int(attacker.max_hp * 0.15)
+        attacker.current_hp = int(attacker.current_hp - percentlost)
+    else:
+        target.take_damage(attacker.damage)
+
+def activate_Chainsaw_fiend (attacker, target):
+    roll = random.randint(1,100)
+    target.take_damage (attacker.damage)
+    if roll <= 25 and attacker.bleed_turns_remaining == 0:
+        attacker.bleed_turns_remaining = 2
+        attacker.bleed_target = target
     

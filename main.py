@@ -4,6 +4,36 @@ import random
 import time
 import ability
 
+ability_map = {
+    "Bald Hero": ability.activate_Bald,
+    "Awakened Galactic Tyrant": ability.activate_galactic_tyrant,
+    "Beast Giant": ability.activate_Beast_Giant,
+    "Awakened Prideful Prince": ability.activate_a_prideful_prince,
+    "Blade Captain": ability.activate_blade_captain,
+    "Body Switcher": ability.activate_body_switcher,
+    "Deranged Assassin": ability.activate_Deranged_assassin,
+    "Death Log": ability.activate_death_log,
+    "Blue Slime": ability.activate_blue_slime,
+    "Awakened Pale Demon Lord": ability.activate_a_pale_demon,
+    "Soul King": ability.activate_soul_king,
+    "Esper Prodigy": ability.activate_esper_prodigy,
+    "Flame Head Captain": ability.activate_flame_head_captain,
+    "Zen Master": ability.activate_zen_masta,
+    "Bijuu Beast": ability.activate_bijuu_beast,
+    "Black Swordsman": ability.activate_black_swordsman,
+    "Awakened Wild Hunter": ability.activate_awakened_wildhunter,
+    "Destroyer Deity": ability.activate_destroyer_deity,
+    "Bamboo Demon": ability.activate_bamboo_demon,
+    "Blade Rebel": ability.activate_blade_rebel,
+    "Awakened Shadow Summoner": ability.activate_awakened_shadow_sum,
+    "Fire Dragon": ability.activate_fire_dragon,
+    "Crimson Eyes": ability.activate_crimson_eyes,
+    "Blood Fiend": ability.activate_blood_fiend,
+    "Chainsaw Fiend": ability.activate_Chainsaw_fiend,
+
+}
+
+
 def parse_stat(value_str):
     cleaned_val = str(value_str).upper()
 
@@ -66,33 +96,46 @@ class Card:
             self.burn_target = None
             self.burn_turns_remaining = 0
 
+        if self.card_name == "Zen Master":
+            self.zenstack = 0
+            self.zen_target = None
+        
+        if self.card_name == "Bamboo Demon":
+            self.bamboo_stack = 0
+
+        if self.card_name == "Awakened Wild Hunter":
+            self.wild_attacks = 1
+        
+        if self.card_name == "Dark Avenger":
+            self.dark_stacks = 0
+            self.burn_turns_remaining = 0
+            self.burn_target = None
+        
+        if self.card_name == "Fire Dragon":
+            self.burn_turns_remaining = 0
+        
+        if self.card_name == "Chainsaw Fiend":
+            self.bleed_turns_remaining = 0
+            self.bleed_target = None
+
+        self.pending_counter_damage = 0
+        
+        if not hasattr(self, 'stun_turns'):
+            self.stun_turns = 0
+        if not hasattr(self, 'burn_turns_remaining'):
+            self.burn_turns_remaining = 0
+        if not hasattr(self, 'burn_target'):
+            self.burn_target = None
+        if not hasattr(self, 'bleed_turns_remaining'):
+            self.bleed_turns_remaining = 0
+        if not hasattr(self, 'bleed_target'):
+            self.bleed_target = None
+
     def perform_attack(self, target): #ability activat
-        if self.card_name == "Bald Hero":
-            ability.activate_Bald(self, target)
-        elif self.card_name == "Awakened Galactic Tyrant":
-            ability.activate_galactic_tyrant(self, target)
-        elif self.card_name == "Beast Giant":
-            ability.activate_Beast_Giant(self, target)
-        elif self.card_name == "Awakened Prideful Prince":
-            ability.activate_a_prideful_prince(self, target)
-        elif self.card_name == "Blade Captain":
-            ability.activate_blade_captain(self, target)
-        elif self.card_name == "Body Switcher":
-            ability.activate_body_switcher(self, target)
-        elif self.card_name == "Deranged Assassin":
-            ability.activate_Deranged_assassin (self, target)
-        elif self.card_name == "Death Log":
-            ability.activate_death_log(self, target)
-        elif self.card_name == "Blue Slime":
-            ability.activate_blue_slime(self, target)
-        elif self.card_name == "Awakened Pale Demon Lord":
-            ability.activate_a_pale_demon(self, target)
-        elif self.card_name == "Soul King":
-            ability.activate_soul_king (self, target)
-        elif self.card_name == "Esper Prodigy":
-            ability.activate_esper_prodigy(self, target)
-        elif self.card_name == "Flame Head Captain":
-            ability.activate_flame_head_captain(self, target)
+        ability_func = ability_map.get(self.card_name)
+        if ability_func:
+            ability_func(self, target)
+            print (f"{self.card_name} damaged")
         else:
             print (f"{self.card_name} damaged")
             target.take_damage(self.damage)
@@ -108,7 +151,7 @@ class Card:
                 return 0
             
         elif self.card_name == "Armored Giant":
-            if self.shield_activated:
+            if self.shield_active:
                 print ("Shield Blocked")
                 self.shield_active = False
                 return 0
@@ -126,12 +169,22 @@ class Card:
             if self.flame_stacks >= 3:
                 incoming_damage = int(incoming_damage * 0.65)
 
+        if self.card_name == "Undead Commander" and self.has_revive:
+            incoming_damage = int(incoming_damage * 0.8)
+
         return incoming_damage
     
     def take_damage(self, amount):
         final_damage = self.try_to_defend(amount)
         self.current_hp -= final_damage
-
+        
+        if self.card_name == "Undead Commander" and final_damage > 0:
+            self.pending_counter_damage = int(self.damage * 1.15)
+        elif self.card_name == "Blade Warrior" and final_damage > 0:
+            self.pending_counter_damage = int(self.damage * 1.25)
+        else:
+            self.pending_counter_damage = 0
+                
     def is_alive(self):
         return self.current_hp >  0
 
@@ -162,6 +215,11 @@ class Card:
                     self.has_revive = True
                     self.current_hp = self.max_hp
                     return True
+        if self.card_name == "Undead Commander" and not self.has_revive:
+            if self.current_hp <= 0:
+                self.has_revive = True
+                self.current_hp = int(self.max_hp)
+                return True
 
         return False
 
@@ -181,8 +239,30 @@ class BattleSimulation:
 
             self.turn_count += 1
             print (f"turn {self.turn_count}")
-
-            card_a.perform_attack(card_b)
+            
+            if card_a.burn_turns_remaining > 0 and card_a.burn_target and card_a.burn_target.is_alive():
+                if card_a.card_name == "Dark Avenger":
+                    burn_dmg = int(card_a.burn_target.max_hp * 0.10)
+                elif card_a.card_name == "Fire Dragon":
+                    burn_dmg = int(card_a.burn_target.max_hp * 0.05)
+                else:
+                    burn_dmg = int(card_a.burn_target.max_hp * 0.05)
+                card_a.burn_target.current_hp -= burn_dmg
+                card_a.burn_turns_remaining -= 1
+            
+            if card_a.bleed_turns_remaining > 0 and card_a.bleed_target and card_a.bleed_target.is_alive():
+                bleed_dmg = int(card_a.bleed_target.max_hp * 0.10)
+                card_a.bleed_target.current_hp -= bleed_dmg
+                card_a.bleed_turns_remaining -= 1
+            
+            if card_a.stun_turns > 0:
+                card_a.stun_turns -= 1
+            else:
+                card_a.perform_attack(card_b)
+            
+            if card_b.pending_counter_damage > 0 and card_b.is_alive():
+                card_a.take_damage(card_b.pending_counter_damage)
+                card_b.pending_counter_damage = 0
 
             if not card_b.is_alive():
                 if card_b.check_revival():
@@ -190,7 +270,34 @@ class BattleSimulation:
                 else:
                     print (f"{card_a.card_name} wins")
                     break
-            card_b.perform_attack(card_a)
+            
+            if not card_a.is_alive():
+                print (f"{card_b.card_name} wins")
+                break
+            
+            if card_b.burn_turns_remaining > 0 and card_b.burn_target and card_b.burn_target.is_alive():
+                if card_b.card_name == "Dark Avenger":
+                    burn_dmg = int(card_b.burn_target.max_hp * 0.10)
+                elif card_b.card_name == "Fire Dragon":
+                    burn_dmg = int(card_b.burn_target.max_hp * 0.05)
+                else:
+                    burn_dmg = int(card_b.burn_target.max_hp * 0.05)
+                card_b.burn_target.current_hp -= burn_dmg
+                card_b.burn_turns_remaining -= 1
+            
+            if card_b.bleed_turns_remaining > 0 and card_b.bleed_target and card_b.bleed_target.is_alive():
+                bleed_dmg = int(card_b.bleed_target.max_hp * 0.10)
+                card_b.bleed_target.current_hp -= bleed_dmg
+                card_b.bleed_turns_remaining -= 1
+                
+            if card_b.stun_turns > 0:
+                card_b.stun_turns -= 1
+            else:
+                card_b.perform_attack(card_a)
+            
+            if card_a.pending_counter_damage > 0 and card_a.is_alive():
+                card_b.take_damage(card_a.pending_counter_damage)
+                card_a.pending_counter_damage = 0  # Reset after applying
 
             if not card_a.is_alive():
                 if card_a.check_revival():
@@ -201,6 +308,7 @@ class BattleSimulation:
 
         
         print (f"Battle has eneded in {self.turn_count}")
+        # later do a 4x4 simulation or a 2x2/3x3 to see what comps will work later
 
 
 if __name__ == "__main__":
@@ -211,10 +319,10 @@ if __name__ == "__main__":
     #data_a = random.choice(raw_data)
     #data_b = random.choice(raw_data)
 
-    data_a = get_card_data("Zen Master", raw_data)
+    data_a = get_card_data("Bijuu Beast", raw_data)
     data_b = get_card_data("Blue Slime", raw_data)
     player_1 = Card(data_a)
     player_2 = Card(data_b)
-
+    
     sim = BattleSimulation()
     sim.run_1x1(player_1,player_2)
