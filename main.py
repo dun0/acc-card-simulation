@@ -30,8 +30,19 @@ ability_map = {
     "Crimson Eyes": ability.activate_crimson_eyes,
     "Blood Fiend": ability.activate_blood_fiend,
     "Chainsaw Fiend": ability.activate_Chainsaw_fiend,
-
 }
+
+playable_cards_without_attack_abilities = [
+    "Armored Giant",
+    "Blade Warrior",
+    "Undead Commander",
+    "Berserker Shinigami",
+    "Combat Giant",
+    "Crimson Vampire",
+
+]
+
+all_playable_cards = list(ability_map.keys()) + playable_cards_without_attack_abilities
 
 
 def parse_stat(value_str):
@@ -131,13 +142,11 @@ class Card:
         if not hasattr(self, 'bleed_target'):
             self.bleed_target = None
 
-    def perform_attack(self, target): #ability activat
+    def perform_attack(self, target):
         ability_func = ability_map.get(self.card_name)
         if ability_func:
             ability_func(self, target)
-            print (f"{self.card_name} damaged")
         else:
-            print (f"{self.card_name} damaged")
             target.take_damage(self.damage)
 
 
@@ -146,20 +155,17 @@ class Card:
         if self.card_name == "Bijuu Beast":
             roll = random.randint(1,100)
             if roll <= self.dodge_chance:
-                print ("Dodge")
                 self.dodge_chance -= 16
                 return 0
             
         elif self.card_name == "Armored Giant":
             if self.shield_active:
-                print ("Shield Blocked")
                 self.shield_active = False
                 return 0
             
         elif self.card_name == "Blade Captain":
             roll1 = random.randint(1,100)
             if roll1 <= self.dodge_chance:
-                print ("Dodge")
                 return 0
         
         if self.card_name == "Shadow Monarch":
@@ -224,90 +230,77 @@ class Card:
         return False
 
 class BattleSimulation:
-    def __init__(self):
+    def __init__(self, verbose=False):
         self.turn_count = 0
-
-    def run_1x1 (self, card_a, card_b):
-        print ("="*50)
-        print (f"Battle started between {card_a} and {card_b}")
-        print ("="*50)
+        self.verbose = verbose
 
 
-        self.turn_count = 0
+    def process_card_turn(self, attacker, defender):
 
-        while card_a.is_alive() and card_b.is_alive():
-
-            self.turn_count += 1
-            print (f"turn {self.turn_count}")
-            
-            if card_a.burn_turns_remaining > 0 and card_a.burn_target and card_a.burn_target.is_alive():
-                if card_a.card_name == "Dark Avenger":
-                    burn_dmg = int(card_a.burn_target.max_hp * 0.10)
-                elif card_a.card_name == "Fire Dragon":
-                    burn_dmg = int(card_a.burn_target.max_hp * 0.05)
-                else:
-                    burn_dmg = int(card_a.burn_target.max_hp * 0.05)
-                card_a.burn_target.current_hp -= burn_dmg
-                card_a.burn_turns_remaining -= 1
-            
-            if card_a.bleed_turns_remaining > 0 and card_a.bleed_target and card_a.bleed_target.is_alive():
-                bleed_dmg = int(card_a.bleed_target.max_hp * 0.10)
-                card_a.bleed_target.current_hp -= bleed_dmg
-                card_a.bleed_turns_remaining -= 1
-            
-            if card_a.stun_turns > 0:
-                card_a.stun_turns -= 1
+        if attacker.burn_turns_remaining > 0 and attacker.burn_target and attacker.burn_target.is_alive():
+            if attacker.card_name == "Dark Avenger":
+                burn_dmg = int(attacker.burn_target.max_hp * 0.10)
+            elif attacker.card_name == "Fire Dragon":
+                burn_dmg = int(attacker.burn_target.max_hp * 0.05)
             else:
-                card_a.perform_attack(card_b)
-            
-            if card_b.pending_counter_damage > 0 and card_b.is_alive():
-                card_a.take_damage(card_b.pending_counter_damage)
-                card_b.pending_counter_damage = 0
+                burn_dmg = int(attacker.burn_target.max_hp * 0.05)
 
-            if not card_b.is_alive():
-                if card_b.check_revival():
-                    pass
-                else:
-                    print (f"{card_a.card_name} wins")
-                    break
-            
-            if not card_a.is_alive():
-                print (f"{card_b.card_name} wins")
-                break
-            
-            if card_b.burn_turns_remaining > 0 and card_b.burn_target and card_b.burn_target.is_alive():
-                if card_b.card_name == "Dark Avenger":
-                    burn_dmg = int(card_b.burn_target.max_hp * 0.10)
-                elif card_b.card_name == "Fire Dragon":
-                    burn_dmg = int(card_b.burn_target.max_hp * 0.05)
-                else:
-                    burn_dmg = int(card_b.burn_target.max_hp * 0.05)
-                card_b.burn_target.current_hp -= burn_dmg
-                card_b.burn_turns_remaining -= 1
-            
-            if card_b.bleed_turns_remaining > 0 and card_b.bleed_target and card_b.bleed_target.is_alive():
-                bleed_dmg = int(card_b.bleed_target.max_hp * 0.10)
-                card_b.bleed_target.current_hp -= bleed_dmg
-                card_b.bleed_turns_remaining -= 1
-                
-            if card_b.stun_turns > 0:
-                card_b.stun_turns -= 1
-            else:
-                card_b.perform_attack(card_a)
-            
-            if card_a.pending_counter_damage > 0 and card_a.is_alive():
-                card_b.take_damage(card_a.pending_counter_damage)
-                card_a.pending_counter_damage = 0  # Reset after applying
+            attacker.burn_target.current_hp -= burn_dmg
+            attacker.burn_turns_remaining -= 1
 
-            if not card_a.is_alive():
-                if card_a.check_revival():
-                    pass
-                else:
-                    print (f"{card_b.card_name} wins")
-                    break
-
+        if attacker.bleed_turns_remaining > 0 and attacker.bleed_target and attacker.bleed_target.is_alive():
+            if attacker.card_name == "Chainsaw Fiend":
+                bleed_dmg = int(attacker.bleed_target.max_hp * 0.10)
+                attacker.bleed_target.current_hp -= bleed_dmg
+                attacker.bleed_turns_remaining -= 1
         
-        print (f"Battle has eneded in {self.turn_count}")
+        if attacker.stun_turns > 0:
+            attacker.stun_turns -= 1
+        else:
+            attacker.perform_attack(defender)
+        
+        if defender.pending_counter_damage > 0 and defender.is_alive():
+            attacker.take_damage(defender.pending_counter_damage)
+            defender.pending_counter_damage = 0
+        
+        if not defender.is_alive():
+            if defender.check_revival():
+                pass  
+            else:
+                return (True, attacker.card_name) 
+        
+
+        if not attacker.is_alive():
+            return (True, defender.card_name)
+        
+        return (False, None)
+
+
+
+    def run_1x1(self, card_a, card_b):
+        if self.verbose:
+            print ("="*50)
+            print (f"Battle started between {card_a.card_name} and {card_b.card_name}")
+            print ("="*50)
+        self.turn_count = 0
+        while card_a.is_alive() and card_b.is_alive():
+            self.turn_count += 1
+            if self.verbose:
+                print(f"turn {self.turn_count}")
+            battle_over, winner = self.process_card_turn(card_a, card_b)
+            if battle_over:
+                if self.verbose:
+                    print(f"{winner} wins")
+                return (winner)
+            
+            battle_over, winner = self.process_card_turn(card_b, card_a)
+            if battle_over:
+                if self.verbose:
+                    print(f"{winner} wins")
+                return (winner)
+        if self.verbose:
+            print(f"Battle has ended in {self.turn_count} turns")
+
         # later do a 4x4 simulation or a 2x2/3x3 to see what comps will work later
 
 

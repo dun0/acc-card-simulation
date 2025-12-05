@@ -182,7 +182,6 @@ def activate_dark_avenger(attacker, target):
         attacker.burn_target = target
         burn_damage = int(target.max_hp * 0.1)
         target.take_damage(burn_damage)
-        attacker.burn_turns_remaining -= 1
 
     
 def activate_awakened_shadow_sum (attacker, target):
