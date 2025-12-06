@@ -1,6 +1,9 @@
 import json
 import random
 from main import Card, BattleSimulation, get_card_data, ability_map, all_playable_cards
+import pandas as pd
+import matplotlib.pyplot as plt
+import plotly.express as px
 
 with open('card_database.json') as f:
     raw_data = json.load(f)
@@ -11,10 +14,8 @@ win_counts = {}
 for card_name in available_cards:
     win_counts[card_name] = 0
 
-
-num_battles = 1000000
-
-battle_mode = "4x4"
+num_battles = 100000
+battle_mode = "1v1"
 
 team_comp_wins = {}
 
@@ -52,8 +53,8 @@ if battle_mode == "4x4":
         print(f"{i} {wins} - {comp}") 
 
 elif battle_mode == "1v1":
-        
-    for _ in range(num_battles):
+    match_history = []
+    for i in range(num_battles):
         card_1 = random.choice(available_cards)
         card_2 = random.choice(available_cards)
         while card_1 == card_2:
@@ -64,8 +65,31 @@ elif battle_mode == "1v1":
         player2 = Card(data2)
         sim = BattleSimulation(verbose=False)
         winner = sim.run_1x1(player1, player2)
-        win_counts[winner] += 1
+        match_history.append({
+            "match_id": i,
+            "winner": winner
+        })
 
-    sorted_results = sorted(win_counts.items(), key=lambda x: x[1], reverse=True)
-    for card_name, wins in sorted_results:
-        print(f"{card_name}: {wins} wins")
+    df = pd.DataFrame(match_history)
+
+    binary_wins = pd.get_dummies(df['winner'])
+
+    cumulative_wins = binary_wins.cumsum()
+    
+    top_10_name = cumulative_wins.iloc[-1].nlargest(10).index
+
+    top_10_data = cumulative_wins[top_10_name]
+
+    top_10_data.plot()
+
+    #    fig = px.line(cumulative_wins,title=f"wins over {num_battles}", labels={"index": "Match Number", "value": "Total Wins", "variable": "Character"})
+    #    fig.show()
+
+    plt.title(f"Win History Over {num_battles} Matches")
+    plt.xlabel("Match Number")
+    plt.ylabel("Total Wins")
+    
+    plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+    plt.tight_layout() # Fixes layout issues
+    
+    plt.show()

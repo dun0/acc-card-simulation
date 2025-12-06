@@ -198,9 +198,10 @@ def activate_fire_dragon (attacker, target):
 
 def activate_crimson_eyes (attacker, target):
     target.take_damage(attacker.damage)
-    if not hasattr(attacker, 'crimson_used'):
-        target.stun_turns = 1
-        attacker.crimson_used = True
+    target.take_damage(attacker.damage)
+
+def on_entry_crimson_eyes(attacker, target):
+    target.stun_turns = 1
 
 def activate_blood_fiend(attacker, target):
     roll = random.randint(1,100)
@@ -225,15 +226,23 @@ def activate_golden_wnd (attacker, target):
 
 def activate_green_bomba (attacker, target):
     target.take_damage(attacker.damage)
-    if attacker.current_hp <= 0:
-        target.take_damage(attacker.max_hp)
+
+def on_death_green_bomber(attacker, target):
+    target.take_damage(attacker.max_hp)
 
 def activate_homeroom_teach (attacker, target):
     target.take_damage(attacker.damage)
 
+def on_entry_homeroom_teacher(attacker, target):
+    attacker.max_hp = int(attacker.max_hp * 1.2)
+    attacker.damage = int(attacker.damage * 1.2)
+    attacker.current_hp = attacker.max_hp
+    
 def activate_light_admiral(attacker, target):
-    target.damage = int(target.damage* 0.9)
-    target.take_damage (attacker.damage)
+    target.take_damage(attacker.damage)
+
+def on_entry_light_admiral(attacker, target):
+    target.damage = int(target.damage * 0.9)
 
 def activate_mist_hashira(attacker, target):
     missing_hp_percent = int((1 - attacker.current_hp / attacker.max_hp) * 100)
@@ -243,10 +252,10 @@ def activate_mist_hashira(attacker, target):
     
 
 def activate_muscle_head (attacker, target):
-    if attacker.entry > 0:
-        target.take_damage(int(target.max_hp * 0.12))
-        attacker.entry -= 1
-    target.take_damage (attacker.damage)
+    target.take_damage(attacker.damage)
+
+def on_entry_muscle_head(attacker, target):
+    target.take_damage(int(target.max_hp * 0.12))
 
 def activate_namekian_sage (attacker, target):
     roll = random.randint(1,100)
@@ -263,22 +272,24 @@ def activate_peaceful_swordsman(attacker, target):
             target.take_damage(int(attacker.damage * 0.1))
 
 def activate_red_emperor (attacker, target):
-    target.damage = (target.damage * 0.8)
     target.take_damage(attacker.damage)
+
+def on_entry_red_emperor(attacker, target):
+    target.damage = int(target.damage * 0.8)
 
 def activate_ripple_knight (attacker, target):
     target.take_damage(attacker.damage)
     attacker.current_hp += int(attacker.damage *0.1)
 
 def activate_straw_hat(attacker, target):
-    if attacker.entry > 0:
-        target.current_hp = int(target.current_hp * 0.85)
-        attacker.entry -= 1
     target.take_damage(attacker.damage)
 
+def on_entry_straw_hat(attacker, target):
+    target.current_hp = int(target.current_hp * 0.85)
+
 def activate_water_hasira(attacker, target):
-    if attacker.entry > 0:
-        attacker.max_hp = int(attacker.max_hp * 1.25)
-        attacker.current_hp = attacker.max_hp
-        attacker.entry -= 1
     target.take_damage(attacker.damage)
+
+def on_entry_water_hashira(attacker, target):
+    attacker.max_hp = int(attacker.max_hp * 1.25)
+    attacker.current_hp = attacker.max_hp

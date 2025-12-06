@@ -45,6 +45,20 @@ ability_map = {
 
 }
 
+on_entry_ability_map = {
+    "Homeroom Teacher": ability.on_entry_homeroom_teacher,
+    "Muscle Head": ability.on_entry_muscle_head,
+    "Straw Hat": ability.on_entry_straw_hat,
+    "Water Hashira": ability.on_entry_water_hashira,
+    "Red Emperor": ability.on_entry_red_emperor,
+    "Light Admiral": ability.on_entry_light_admiral,
+    "Crimson Eyes": ability.on_entry_crimson_eyes,
+}
+
+on_death_ability_map = {
+    "Green Bomber": ability.on_death_green_bomber,
+}
+
 playable_cards_without_attack_abilities = [
     "Armored Giant",
     "Blade Warrior",
@@ -145,19 +159,7 @@ class Card:
             self.bleed_turns_remaining = 0
             self.bleed_target = None
         
-        if self.card_name == "Homeroom Teacher":
-            self.max_hp = int(self.max_hp * 1.2)
-            self.current_hp = self.max_hp
-            self.damage = int(self.damage * 1.2)
 
-        if self.card_name == "Muscle Head":
-            self.entry = 1
-
-        if self.card_name == "Straw Hat":
-            self.entry = 1
-        
-        if self.card_name == "Water Hashira":
-            self.entry = 1
 
         self.pending_counter_damage = 0
         
@@ -178,6 +180,16 @@ class Card:
             ability_func(self, target)
         else:
             target.take_damage(self.damage)
+
+    def trigger_on_entry(self, target):
+        entry_func = on_entry_ability_map.get(self.card_name)
+        if entry_func:
+            entry_func(self, target)
+
+    def trigger_on_death(self, target):
+        death_func = on_death_ability_map.get(self.card_name)
+        if death_func:
+            death_func(self, target)
 
 
     def try_to_defend(self, incoming_damage): #defense logic section
@@ -226,7 +238,7 @@ class Card:
             self.pending_counter_damage = int(self.damage * 1.25)
 
     def is_alive(self):
-        return self.current_hp >  0
+        return self.current_hp >  0        
 
     def check_revival(self):
         if self.card_name == "Berserker Shinigami" and not self.has_revive:
@@ -298,6 +310,7 @@ class BattleSimulation:
             defender.pending_counter_damage = 0
         
         if not defender.is_alive():
+            defender.trigger_on_death(attacker)
             if defender.check_revival():
                 pass  
             else:
@@ -317,6 +330,8 @@ class BattleSimulation:
             print (f"Battle started between {card_a.card_name} and {card_b.card_name}")
             print ("="*50)
         self.turn_count = 0
+        card_a.trigger_on_entry(card_b)
+        card_b.trigger_on_entry(card_a)
         while card_a.is_alive() and card_b.is_alive():
             self.turn_count += 1
             if self.verbose:
@@ -335,11 +350,17 @@ class BattleSimulation:
         if self.verbose:
             print(f"Battle has ended in {self.turn_count} turns")
     
+    
+
     def run_4x4(self,team_1,team_2):
 
         active_index1 = 0
         active_index2 = 0
         self.turn_count = 0
+
+        # Trigger entry for the first two fighters
+        team_1[0].trigger_on_entry(team_2[0])
+        team_2[0].trigger_on_entry(team_1[0])
 
         while (active_index1 < 4 and active_index2 < 4):
             active_card_1 = team_1[active_index1]
@@ -353,13 +374,17 @@ class BattleSimulation:
                 active_index2 +=1
                 if active_index2 >= 4:
                     return team_1
-                    
+                # New card enters for Team 2 -> Trigger Entry on the survivor (Team 1)
+                team_2[active_index2].trigger_on_entry(active_card_1)
+                     
             battle_over, winner = self.process_card_turn(active_card_2, active_card_1)
 
             if not active_card_1.is_alive():
                 active_index1 += 1
                 if active_index1 >= 4:
                     return team_2
+                # New card enters for Team 1 -> Trigger Entry on the survivor (Team 2)
+                team_1[active_index1].trigger_on_entry(active_card_2)
 
             
 
