@@ -217,4 +217,68 @@ def activate_Chainsaw_fiend (attacker, target):
     if roll <= 25 and attacker.bleed_turns_remaining == 0:
         attacker.bleed_turns_remaining = 2
         attacker.bleed_target = target
+
+def activate_golden_wnd (attacker, target):
+    target.take_damage(attacker.damage)
+    heal_amount = int(attacker.max_hp * 0.15)
+    attacker.current_hp += heal_amount
+
+def activate_green_bomba (attacker, target):
+    target.take_damage(attacker.damage)
+    if attacker.current_hp <= 0:
+        target.take_damage(attacker.max_hp)
+
+def activate_homeroom_teach (attacker, target):
+    target.take_damage(attacker.damage)
+
+def activate_light_admiral(attacker, target):
+    target.damage = int(target.damage* 0.9)
+    target.take_damage (attacker.damage)
+
+def activate_mist_hashira(attacker, target):
+    missing_hp_percent = int((1 - attacker.current_hp / attacker.max_hp) * 100)
+    additional_dodge = (missing_hp_percent // 10) * 5
+    attacker.dodge_chance = 10 + additional_dodge
+    target.take_damage(attacker.damage)
     
+
+def activate_muscle_head (attacker, target):
+    if attacker.entry > 0:
+        target.take_damage(int(target.max_hp * 0.12))
+        attacker.entry -= 1
+    target.take_damage (attacker.damage)
+
+def activate_namekian_sage (attacker, target):
+    roll = random.randint(1,100)
+    if roll <= 60:
+        target.take_damage(int(attacker.damage*1.75))
+    else:
+        target.take_damage(attacker.damage)
+
+def activate_peaceful_swordsman(attacker, target):
+    roll = random.randint(1,100)
+    target.take_damage(attacker.damage)
+    if roll <= 60:
+        for _ in range(5):
+            target.take_damage(int(attacker.damage * 0.1))
+
+def activate_red_emperor (attacker, target):
+    target.damage = (target.damage * 0.8)
+    target.take_damage(attacker.damage)
+
+def activate_ripple_knight (attacker, target):
+    target.take_damage(attacker.damage)
+    attacker.current_hp += int(attacker.damage *0.1)
+
+def activate_straw_hat(attacker, target):
+    if attacker.entry > 0:
+        target.current_hp = int(target.current_hp * 0.85)
+        attacker.entry -= 1
+    target.take_damage(attacker.damage)
+
+def activate_water_hasira(attacker, target):
+    if attacker.entry > 0:
+        attacker.max_hp = int(attacker.max_hp * 1.25)
+        attacker.current_hp = attacker.max_hp
+        attacker.entry -= 1
+    target.take_damage(attacker.damage)

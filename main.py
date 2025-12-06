@@ -30,6 +30,19 @@ ability_map = {
     "Crimson Eyes": ability.activate_crimson_eyes,
     "Blood Fiend": ability.activate_blood_fiend,
     "Chainsaw Fiend": ability.activate_Chainsaw_fiend,
+    "Golden Wind": ability.activate_golden_wnd,
+    "Green Bomber":ability.activate_green_bomba,
+    "Homeroom Teacher": ability.activate_homeroom_teach,
+    "Light Admiral": ability.activate_light_admiral,
+    "Mist Hashira": ability.activate_mist_hashira,
+    "Muscle Head": ability.activate_muscle_head,
+    "Namekian Sage": ability.activate_namekian_sage,
+    "Peaceful Swordsman": ability.activate_peaceful_swordsman,
+    "Red Emperor": ability.activate_red_emperor,
+    "Ripple Knight": ability.activate_ripple_knight,
+    "Straw Hat": ability.activate_straw_hat,
+    "Water Hashira": ability.activate_water_hasira,
+
 }
 
 playable_cards_without_attack_abilities = [
@@ -91,7 +104,10 @@ class Card:
         if self.card_name == "Bijuu Beast":
             self.dodge_chance = 60
 
-        elif self.card_name == "Armored Giant":
+        if self.card_name == "Mist Hashira":
+            self.dodge_chance = 10
+
+        if self.card_name == "Armored Giant":
             self.shield_active = True
         
         if self.card_name == "Science King":
@@ -128,6 +144,20 @@ class Card:
         if self.card_name == "Chainsaw Fiend":
             self.bleed_turns_remaining = 0
             self.bleed_target = None
+        
+        if self.card_name == "Homeroom Teacher":
+            self.max_hp = int(self.max_hp * 1.2)
+            self.current_hp = self.max_hp
+            self.damage = int(self.damage * 1.2)
+
+        if self.card_name == "Muscle Head":
+            self.entry = 1
+
+        if self.card_name == "Straw Hat":
+            self.entry = 1
+        
+        if self.card_name == "Water Hashira":
+            self.entry = 1
 
         self.pending_counter_damage = 0
         
@@ -168,15 +198,21 @@ class Card:
             if roll1 <= self.dodge_chance:
                 return 0
         
-        if self.card_name == "Shadow Monarch":
+        elif self.card_name == "Mist Hashira":
+            roll2 = random.randint(1,100)
+            if roll2 <= self.dodge_chance:
+                return 0
+        
+        elif self.card_name == "Shadow Monarch":
             incoming_damage = int(incoming_damage * 1.1)
             
-        if self.card_name == "Flame Head Captain":
+        elif self.card_name == "Flame Head Captain":
             if self.flame_stacks >= 3:
                 incoming_damage = int(incoming_damage * 0.65)
 
-        if self.card_name == "Undead Commander" and self.has_revive:
+        elif self.card_name == "Undead Commander" and self.has_revive:
             incoming_damage = int(incoming_damage * 0.8)
+                    
 
         return incoming_damage
     
