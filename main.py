@@ -188,9 +188,7 @@ class Card:
             self.pending_counter_damage = int(self.damage * 1.15)
         elif self.card_name == "Blade Warrior" and final_damage > 0:
             self.pending_counter_damage = int(self.damage * 1.25)
-        else:
-            self.pending_counter_damage = 0
-                
+
     def is_alive(self):
         return self.current_hp >  0
 
@@ -300,9 +298,34 @@ class BattleSimulation:
                 return (winner)
         if self.verbose:
             print(f"Battle has ended in {self.turn_count} turns")
+    
+    def run_4x4(self,team_1,team_2):
 
-        # later do a 4x4 simulation or a 2x2/3x3 to see what comps will work later
+        active_index1 = 0
+        active_index2 = 0
+        self.turn_count = 0
 
+        while (active_index1 < 4 and active_index2 < 4):
+            active_card_1 = team_1[active_index1]
+            active_card_2 = team_2[active_index2]
+
+            self.turn_count += 1
+
+            battle_over, winner = self.process_card_turn(active_card_1, active_card_2)
+
+            if not active_card_2.is_alive():
+                active_index2 +=1
+                if active_index2 >= 4:
+                    return team_1
+                    
+            battle_over, winner = self.process_card_turn(active_card_2, active_card_1)
+
+            if not active_card_1.is_alive():
+                active_index1 += 1
+                if active_index1 >= 4:
+                    return team_2
+
+            
 
 if __name__ == "__main__":
 
