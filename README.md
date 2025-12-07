@@ -1,31 +1,17 @@
-ACC battle sim
+Anime Card Clash Battle Sim
 
-1x1 and 4x4 anime card battle sim for finding optimal strategies through mass simulations.
+1v1 and 4v4 anime card battle sim for statistical strategy analysis.
 
+What it does:
 
-- 50 unique abilities (burns, stuns, revives, counters, stacking mechanics)
+- 50 cards with unique abilities (burns, stuns, revives, counters, stacking)
 
-- 1v1 & 4x4 modes running 100k+ silent battles
+- Parallel processing: runs 100k+ battles across all CPU cores
 
-- Team composition win rate tracking & analysis
+- Full status effect engine + revival chains
 
 - Pandas DataFrame export with cumulative win tracking
 
-- Matplotlib/Plotly visualization framework
+- Matplotlib visualization for top performers
 
-- Full status effect engine (burn, bleed, stun, dodge, shields)
-
-- Clean OOP architecture with extensible ability mapping
-
-Next:
-
-
-- Full matchup matrix generation
-
-- Heatmap visualizations
-
-- Performance optimization for million-battle scale
-
-- Maybe expanded card pool (current is ~1/8th of total)
-
-- Bug fixes 
+- Clean OOP architecture, easy to extend
