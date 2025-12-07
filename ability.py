@@ -114,7 +114,7 @@ def activate_flame_head_captain(attacker, target):
             target.take_damage(burn_damage)
             attacker.burn_turns_remaining -= 1
 
-def activate_zen_masta(attacker, target):
+def activate_zen_master(attacker, target):
     if attacker.zen_target != target:
         attacker.zen_target = target
         attacker.zenstack = 0
@@ -132,7 +132,6 @@ def activate_zen_masta(attacker, target):
             bonus_damage = int(attacker.damage * 2.25)
             target.take_damage(bonus_damage)
             attacker.zenstack = 0 
-            # TODO: Apply 225% damage to next enemy
 
 def activate_bijuu_beast (attacker, target):
     target.take_damage(attacker.damage)
@@ -208,7 +207,7 @@ def activate_blood_fiend(attacker, target):
     if roll <= 50:
         target.take_damage(int(attacker.damage * 1.3))
         percentlost = int(attacker.max_hp * 0.15)
-        attacker.current_hp = int(attacker.current_hp - percentlost)
+        attacker.take_damage(percentlost)
     else:
         target.take_damage(attacker.damage)
 
@@ -224,7 +223,7 @@ def activate_golden_wnd (attacker, target):
     heal_amount = int(attacker.max_hp * 0.15)
     attacker.current_hp += heal_amount
 
-def activate_green_bomba (attacker, target):
+def activate_green_bomber (attacker, target):
     target.take_damage(attacker.damage)
 
 def on_death_green_bomber(attacker, target):

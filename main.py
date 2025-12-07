@@ -18,7 +18,7 @@ ability_map = {
     "Soul King": ability.activate_soul_king,
     "Esper Prodigy": ability.activate_esper_prodigy,
     "Flame Head Captain": ability.activate_flame_head_captain,
-    "Zen Master": ability.activate_zen_masta,
+    "Zen Master": ability.activate_zen_master,
     "Bijuu Beast": ability.activate_bijuu_beast,
     "Black Swordsman": ability.activate_black_swordsman,
     "Awakened Wild Hunter": ability.activate_awakened_wildhunter,
@@ -31,7 +31,7 @@ ability_map = {
     "Blood Fiend": ability.activate_blood_fiend,
     "Chainsaw Fiend": ability.activate_Chainsaw_fiend,
     "Golden Wind": ability.activate_golden_wnd,
-    "Green Bomber":ability.activate_green_bomba,
+    "Green Bomber":ability.activate_green_bomber,
     "Homeroom Teacher": ability.activate_homeroom_teach,
     "Light Admiral": ability.activate_light_admiral,
     "Mist Hashira": ability.activate_mist_hashira,
@@ -73,8 +73,10 @@ all_playable_cards = list(ability_map.keys()) + playable_cards_without_attack_ab
 
 
 def parse_stat(value_str):
-    cleaned_val = str(value_str).upper()
+    if isinstance(value_str, (int, float)):
+        return int(value_str)
 
+    cleaned_val = str(value_str).upper()
     cleaned_val = cleaned_val.replace(",", "")
 
     if "K" in cleaned_val:
@@ -102,15 +104,29 @@ def get_card_data (card_name, full_database):
 
 class Card:
     def __init__(self,data):
-        self.max_hp = parse_stat(data['hp'])
-        self.current_hp = self.max_hp
-        self.damage = parse_stat(data['damage'])
+        self.base_max_hp = parse_stat(data['hp'])
+        self.base_damage = parse_stat(data['damage'])
         self.card_name = data['name']
         self.ability_desc = data['ability']
-        self.has_revive = False
         
+        self.reset()
+
+    def reset(self):
+        self.max_hp = self.base_max_hp
+        self.damage = self.base_damage
+        self.current_hp = self.max_hp
+        
+        self.has_revive = False
         self.dodge_chance = 0
         self.attack_count = 0
+        self.pending_counter_damage = 0
+        
+        self.stun_turns = 0
+        self.burn_turns_remaining = 0
+        self.burn_target = None
+        self.bleed_turns_remaining = 0
+        self.bleed_target = None
+        self.wild_attacks = 1 
 
         if self.card_name == "Blade Captain":
             self.dodge_chance = 35
@@ -157,21 +173,6 @@ class Card:
         
         if self.card_name == "Chainsaw Fiend":
             self.bleed_turns_remaining = 0
-            self.bleed_target = None
-        
-
-
-        self.pending_counter_damage = 0
-        
-        if not hasattr(self, 'stun_turns'):
-            self.stun_turns = 0
-        if not hasattr(self, 'burn_turns_remaining'):
-            self.burn_turns_remaining = 0
-        if not hasattr(self, 'burn_target'):
-            self.burn_target = None
-        if not hasattr(self, 'bleed_turns_remaining'):
-            self.bleed_turns_remaining = 0
-        if not hasattr(self, 'bleed_target'):
             self.bleed_target = None
 
     def perform_attack(self, target):
@@ -283,6 +284,15 @@ class BattleSimulation:
 
     def process_card_turn(self, attacker, defender):
 
+        if attacker.burn_turns_remaining > 0:
+            if attacker.burn_target is None or not attacker.burn_target.is_alive():
+                attacker.burn_turns_remaining = 0
+                attacker.burn_target = None
+        if attacker.bleed_turns_remaining > 0:
+            if attacker.bleed_target is None or not attacker.bleed_target.is_alive():
+                attacker.bleed_turns_remaining = 0
+                attacker.bleed_target = None
+
         if attacker.burn_turns_remaining > 0 and attacker.burn_target and attacker.burn_target.is_alive():
             if attacker.card_name == "Dark Avenger":
                 burn_dmg = int(attacker.burn_target.max_hp * 0.10)
@@ -358,7 +368,6 @@ class BattleSimulation:
         active_index2 = 0
         self.turn_count = 0
 
-        # Trigger entry for the first two fighters
         team_1[0].trigger_on_entry(team_2[0])
         team_2[0].trigger_on_entry(team_1[0])
 
@@ -374,7 +383,6 @@ class BattleSimulation:
                 active_index2 +=1
                 if active_index2 >= 4:
                     return team_1
-                # New card enters for Team 2 -> Trigger Entry on the survivor (Team 1)
                 team_2[active_index2].trigger_on_entry(active_card_1)
                      
             battle_over, winner = self.process_card_turn(active_card_2, active_card_1)
@@ -383,7 +391,6 @@ class BattleSimulation:
                 active_index1 += 1
                 if active_index1 >= 4:
                     return team_2
-                # New card enters for Team 1 -> Trigger Entry on the survivor (Team 2)
                 team_1[active_index1].trigger_on_entry(active_card_2)
 
             

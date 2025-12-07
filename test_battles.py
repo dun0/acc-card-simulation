@@ -1,95 +1,159 @@
 import json
 import random
-from main import Card, BattleSimulation, get_card_data, ability_map, all_playable_cards
+import time
+import pandas as pd
+import multiprocessing
+from concurrent.futures import ProcessPoolExecutor
 import pandas as pd
 import matplotlib.pyplot as plt
-import plotly.express as px
+from main import Card, BattleSimulation, get_card_data, ability_map, all_playable_cards, parse_stat
 
-with open('card_database.json') as f:
-    raw_data = json.load(f)
-the_list = list(ability_map.keys())
+BATCH_SIZE = 50000
+TOTAL_BATTLES = 1000000
+BATTLE_MODE = "1v1"
 
-available_cards = all_playable_cards
-win_counts = {}
-for card_name in available_cards:
-    win_counts[card_name] = 0
+def load_and_parse_db():
+    with open('card_database.json') as f:
+        raw_data = json.load(f)
+    
+    cards_map = {}
+    for card in raw_data:
+        card['hp'] = parse_stat(card['hp'])
+        card['damage'] = parse_stat(card['damage'])
+        cards_map[card['name']] = card
+        
+    return cards_map
 
-num_battles = 100000
-battle_mode = "1v1"
+def run_batch(num_battles, mode, seed, card_keys_list, parsed_card_data):
+    random.seed(seed) 
+    
 
-team_comp_wins = {}
+    card_pool = {}
+    
+    instances_needed = 8 if mode == "4x4" else 2
+    
+    for name in card_keys_list:
+        data = parsed_card_data.get(name)
+        if data:
+            card_pool[name] = [Card(data) for _ in range(instances_needed)]
 
-if battle_mode == "4x4":
+    results = []
+    
+    sim = BattleSimulation(verbose=False)
+    
     for _ in range(num_battles):
-        team_1 = []
-        team_2 = []
+        if mode == "1v1":
+            name1 = random.choice(card_keys_list)
+            name2 = random.choice(card_keys_list)
+            while name1 == name2:
+                name2 = random.choice(card_keys_list)
+            
+            card1 = card_pool[name1][0]
+            card2 = card_pool[name2][0] 
+            
+            card1.reset()
+            card2.reset()
+            
+            winner = sim.run_1x1(card1, card2)
+            results.append(winner)
+            
+        elif mode == "4x4":
 
-        for i in range(4):
-            card_name_1 = random.choice(available_cards)
-            card_name_2 = random.choice(available_cards)
+            
+            team1_cards = []
+            team2_cards = []
+            
+            usage_counts = {name: 0 for name in card_keys_list}
+            
+            for _ in range(4):
+                name = random.choice(card_keys_list)
+                idx = usage_counts[name]
+                usage_counts[name] += 1
+                
+                card_obj = card_pool[name][idx]
+                card_obj.reset()
+                team1_cards.append(card_obj)
 
-            data1 = get_card_data(card_name_1, raw_data)
-            data2 = get_card_data(card_name_2, raw_data)
+            for _ in range(4):
+                name = random.choice(card_keys_list)
+                idx = usage_counts[name]
+                usage_counts[name] += 1
+                
+                card_obj = card_pool[name][idx]
+                card_obj.reset()
+                team2_cards.append(card_obj)
+                
+            winning_team = sim.run_4x4(team1_cards, team2_cards)
+            
+            comp_key = tuple(sorted([c.card_name for c in winning_team]))
+            results.append(comp_key)
 
-            player1 = Card(data1)
-            player2 = Card(data2)
+    return results
 
-            team_1.append(player1)
-            team_2.append(player2)
-
-        sim = BattleSimulation(verbose=False)
-        winning_team = sim.run_4x4(team_1, team_2)
-        team_comp = tuple(sorted([card.card_name for card in winning_team]))
-
-        if team_comp not in team_comp_wins:
-
-            team_comp_wins[team_comp] =0
-
-        team_comp_wins[team_comp] += 1
-
-    sorted_comps = sorted(team_comp_wins.items(), key=lambda x: x[1], reverse=True)
-    print ("Top 30")
-    for i, (comp, wins) in enumerate(sorted_comps[:30], 1):
-        print(f"{i} {wins} - {comp}") 
-
-elif battle_mode == "1v1":
-    match_history = []
-    for i in range(num_battles):
-        card_1 = random.choice(available_cards)
-        card_2 = random.choice(available_cards)
-        while card_1 == card_2:
-            card_2 = random.choice(available_cards)
-        data1 = get_card_data(card_1, raw_data)
-        data2 = get_card_data(card_2, raw_data)
-        player1 = Card(data1)
-        player2 = Card(data2)
-        sim = BattleSimulation(verbose=False)
-        winner = sim.run_1x1(player1, player2)
-        match_history.append({
-            "match_id": i,
-            "winner": winner
-        })
-
-    df = pd.DataFrame(match_history)
-
-    binary_wins = pd.get_dummies(df['winner'])
-
-    cumulative_wins = binary_wins.cumsum()
+if __name__ == "__main__":
+    t_start = time.time()
     
-    top_10_name = cumulative_wins.iloc[-1].nlargest(10).index
-
-    top_10_data = cumulative_wins[top_10_name]
-
-    top_10_data.plot()
-
-    #    fig = px.line(cumulative_wins,title=f"wins over {num_battles}", labels={"index": "Match Number", "value": "Total Wins", "variable": "Character"})
-    #    fig.show()
-
-    plt.title(f"Win History Over {num_battles} Matches")
-    plt.xlabel("Match Number")
-    plt.ylabel("Total Wins")
+    full_card_map = load_and_parse_db()
     
-    plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
-    plt.tight_layout() # Fixes layout issues
+    valid_card_keys = [k for k in all_playable_cards if k in full_card_map]
     
-    plt.show()
+    num_workers = multiprocessing.cpu_count()
+    chunk_size = TOTAL_BATTLES // num_workers
+    futures = []
+    
+    reduced_results = {}
+    all_match_results = []
+    
+    with ProcessPoolExecutor() as executor:
+        for i in range(num_workers):
+            seed = random.randint(0, 999999999) + i
+            
+
+            futures.append(executor.submit(run_batch, chunk_size, BATTLE_MODE, seed, valid_card_keys, full_card_map))
+
+        print("started")
+        
+        for f in futures:
+            batch_data = f.result()
+            
+            for item in batch_data:
+                if item not in reduced_results:
+                    reduced_results[item] = 0
+                reduced_results[item] += 1
+            
+            if BATTLE_MODE == "1v1":
+                all_match_results.extend(batch_data)
+                
+    t_end = time.time()
+    print(f"finished in {t_end - t_start:.2f} seconds")
+    print("-" * 40)
+    
+    # 4. Display Stats
+    if BATTLE_MODE == "1v1":
+        sorted_res = sorted(reduced_results.items(), key=lambda x: x[1], reverse=True)
+        print("top")
+        for name, wins in sorted_res[:30]:
+            print(f"{name}: {wins}")
+            
+        df = pd.DataFrame(all_match_results, columns=['winner'])
+        top_10 = [x[0] for x in sorted_res[:10]]
+        df_top = df[df['winner'].isin(top_10)]
+        binary_wins = pd.get_dummies(df_top['winner'])
+        cumulative_wins = binary_wins.cumsum()
+        
+        plt.figure(figsize=(12, 8))
+        for column in cumulative_wins.columns:
+            plt.plot(cumulative_wins.index, cumulative_wins[column], label=column)
+            
+        plt.title(f"Cumulative Wins (Top 10) - {TOTAL_BATTLES} Battles")
+        plt.xlabel("Battle Number")
+        plt.ylabel("Wins")
+        plt.legend()
+        plt.grid(True)
+        plt.show()
+            
+    elif BATTLE_MODE == "4x4":
+        sorted_res = sorted(reduced_results.items(), key=lambda x: x[1], reverse=True)
+        print("top 30 team comps:")
+        for i, (comp, wins) in enumerate(sorted_res[:30], 1):
+            print(f"{i}. {wins} wins - {comp}")
